@@ -1,0 +1,92 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; // Asegura que ocupe al menos el 100% de la altura de la pantalla
+    padding: 2rem;
+    box-sizing: border-box;
+    position: relative;
+
+    h1 {
+        position: absolute;
+        top: -49px;
+        left: -91px;
+    }
+
+    .projects-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        width: 100%;
+        max-width: 1200px; // Limita el ancho máximo para evitar estiramientos excesivos en pantallas grandes
+        padding: 0 1rem;
+        position: relative;
+        left: 15rem;
+        bottom: 5rem;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                padding: 2.5rem;
+
+                &:nth-child(odd) {
+                    justify-content: flex-start;
+                }
+
+                &:nth-child(even) {
+                    justify-content: flex-end;
+                }
+
+                .project-card {
+                    width: 100%;
+                    max-width: 28rem;
+                    background: rgba(0, 0, 0, 0.52);
+                    padding: 1.5rem;
+                    position: relative;
+                    overflow: visible;
+                    margin: 0;
+
+                    .project-id {
+                        font-size: 20rem;
+                        color: rgba(123, 123, 123, 0.47);
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translate(-50%, -50%);
+                        z-index: -1;
+                    }
+
+                    .project-details {
+                        position: relative;
+                        z-index: 2;
+
+                        h2 {
+                            font-size: 1.5rem;
+                            margin-bottom: 1rem;
+                        }
+
+                        p {
+                            font-size: 1rem;
+                            margin-bottom: 1.5rem;
+                        }
+
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.page-counter {
+    position: fixed;
+    bottom: 3rem; // Ajusta la distancia desde la parte inferior
+    left: 3rem; // Ajusta la distancia desde la parte izquierda
+    display: flex;
+    flex-direction: column; // Cambia la dirección del flex a columna
+    align-items: center; // Centra los elementos horizontalmente
+    font-size: 24px;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 1.5px; // Ajusta el grosor de la línea
+        height: 35rem; // Ajusta la altura de la línea
+        background-color: rgba(220, 220, 220, 0.867); // Ajusta el color de la línea
+        margin: auto;
+    }
+}

@@ -1,0 +1,37 @@
+/* layout.component.css */
+.layout {
+    position: relative;
+    width: 90%;
+    height: 86vh;
+    margin: 20px auto;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50px; // Desplaza el borde hacia arriba
+        left: 20px; // Desplaza el borde hacia la izquierda
+        right: 10px; // Desplaza el borde hacia la derecha
+        bottom: -20px; // Desplaza el borde hacia abajo
+        border: 1.8px solid rgb(220, 220, 220); // Establece el borde
+        pointer-events: none; //
+        z-index: -3;
+    }
+}
+
+app-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+    height: 100%;
+    z-index: -1;
+}
+
+.content-box {
+    position: relative;
+    width: 75%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+}

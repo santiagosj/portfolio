@@ -1,0 +1,58 @@
+.about {
+    padding: 5rem;
+
+    background: rgb(0 0 0 / 52%);
+    position: relative;
+    height: 65.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //justify-content: center;
+
+    h1 {
+        position: absolute;
+        top: 0;
+        left: -5rem
+    }
+
+    .content-about {
+        margin-top: 5rem;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        color: white;
+        line-height: 1.5;
+    }
+
+    .content-about::-webkit-scrollbar {
+        display: none;
+    }
+
+    .content-about p,
+    .content-about h3,
+    .content-about ul {
+        margin-bottom: 1rem;
+    }
+
+    .content-about h3 {
+        //font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact {
+        ul {
+            list-style: none;
+
+            li {
+                display: inline;
+
+                a {
+                    margin: 2rem;
+                }
+            }
+        }
+    }
+
+
+
+}

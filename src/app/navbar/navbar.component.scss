@@ -1,0 +1,53 @@
+h1,
+h2 {
+    font-family: 'Data 70';
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    z-index: 2;
+    justify-content: flex-end;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    margin-right: 1rem;
+    padding-left: 1rem;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: line-through;
+        /* Optional: underline on hover */
+    }
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+select {
+    margin-left: auto;
+}

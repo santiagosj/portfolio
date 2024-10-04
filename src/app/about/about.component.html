@@ -1,0 +1,50 @@
+<section class="about">
+    <h1 class="ubuntu-condensed-regular">About my</h1>
+    <div class="content-about">
+        <p>I am a passionate web/software developer with a strong focus on continuous learning. My journey began with
+            web development and has expanded to include front-end and backend practices. My experiences
+            have taught me adaptability and the importance of lifelong learning. I've worked on diverse projects,
+            including scalable study frameworks and secure learning environments.</p>
+        <p>Looking forward, I aim to deepen my knowledge as full stack developer or even in advanced topics like pen
+            testing and network security.
+            I'm eager to contribute to innovative projects and collaborate with teams that value flexibility and
+            continuous improvement. My goal is to leverage my skills to make meaningful contributions to software
+            development while embracing new challenges.</p>
+
+        <!-- <h2 class="ubuntu-condensed-regular">Experience</h2>
+        <div *ngFor="let experience of jobExperiences">
+            <h3 class="ubuntu-condensed-regular">{{ experience.title }} - <span>{{ experience.company }}</span></h3>
+            <p><strong>{{ experience.startDate }} - {{ experience.endDate }}</strong></p>
+            <p>{{ experience.description }}</p>
+            <ul>
+                <li *ngFor="let task of experience.tasks">
+                    {{ task.description }}, tecnología: {{ task.technology }}, impacto: {{ task.impact }}.
+                </li>
+            </ul>
+        </div>
+        <h2 class="ubuntu-condensed-regular">Education and Certifications</h2>
+        <div *ngFor="let certificate of certificates">
+            <h3 class="ubuntu-condensed-regular">{{ certificate.title }} - {{ certificate.institution }}</h3>
+            <p><strong>Completed on: {{ certificate.completionDate | date }}</strong></p>
+            <p>{{ certificate.description }}</p>
+        </div>
+        <h2 class="ubuntu-condensed-regular">Skills</h2>
+        <div *ngFor="let skill of skills">
+            <h3 class="ubuntu-condensed-regular"> <strong> {{ skill.name }} - {{skill.category}}</strong> </h3>
+            <p>Level: {{ skill.level}}</p>
+        </div> -->
+        <h2 class="ubuntu-condensed-regular">Contact</h2>
+        <div class="contact">
+            <p>Let's be in touch... let my know if you are interested to know me a little bit more</p>
+            <hr>
+            <!-- <p>My contact information is available below:</p> -->
+            <ul>
+                <li *ngFor="let contactLink of contactLinks">
+                    <a href={{contactLink.href}}>
+                        <i class={{contactLink.class}}></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

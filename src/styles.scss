@@ -1,1 +1,91 @@
-/* You can add global styles to this file, and also import other style files */
+.ubuntu-light {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ubuntu-medium {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.ubuntu-light-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.ubuntu-regular-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ubuntu-medium-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.ubuntu-bold-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+.ubuntu-condensed-regular {
+    font-family: "Ubuntu Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Body styles */
+body {
+    transition: background-color 0.4s, color 0.4s;
+    background-color: #090909;
+    color: #c4c4c4;
+    padding: 0;
+    margin: 0;
+}
+
+/* Heading styles */
+h1,
+h2 {
+    font-family: 'Data 70';
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+a {
+    color: #e2e2e2;
+    text-decoration: none;
+}
