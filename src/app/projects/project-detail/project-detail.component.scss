@@ -1,0 +1,19 @@
+.project-detail {
+    padding: 5rem;
+    background: rgb(0 0 0 / 52%);
+    position: relative;
+    height: 65.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+        position: absolute;
+        top: 0;
+        left: -6rem
+    }
+
+    li {
+        padding: 2rem;
+    }
+}

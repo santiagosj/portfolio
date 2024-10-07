@@ -1,0 +1,11 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" *ngFor="let breadcrumb of breadcrumbs; let last = last">
+            <a (click)="navigateTo(breadcrumb.path)" style="cursor:pointer;">
+                {{ breadcrumb.label }}
+            </a>
+            <!-- <span *ngIf="last">{{ breadcrumb.label }}</span> -->
+        </li>
+    </ol>
+    <!-- <button (click)="goBack()" class="btn btn-sm btn-outline-secondary">Back</button> -->
+</nav>

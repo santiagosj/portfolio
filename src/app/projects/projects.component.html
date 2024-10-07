@@ -2,15 +2,15 @@
     <h1 class="ubuntu-condensed-regular">Projects</h1>
     <div class="projects-content">
         <ul>
-            <li *ngFor="let project of projects; let i = index" [ngClass]="{'left': i % 2 === 0, 'right': i % 2 !== 0}">
+            <li *ngFor="let project of projects; let i = index">
                 <div class="project-card">
-                    <div class="project-id ubuntu-condensed-regular">{{ project.id }}</div>
                     <div class="project-details">
-                        <h2 class="ubuntu-medium ">{{ project.title }}</h2>
+                        <h3 class="ubuntu-medium ">{{ project.title }}</h3>
                         <p class="ubuntu-regular">{{ project.description }}</p>
                         <a [routerLink]="['/projects', project.id]">View Details</a>
                     </div>
                 </div>
+                <hr>
             </li>
         </ul>
     </div>

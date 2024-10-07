@@ -3,15 +3,20 @@ import { ActivatedRoute } from '@angular/router';
 import { ProjectsService } from '../../services/projects.service';
 import { Project } from '../../models/project.model';
 import { CommonModule } from '@angular/common';
-
+import { BreadcrumbComponent } from '../../components/breadcrumb/breadcrumb.component';
 @Component({
   selector: 'app-project-detail',
   templateUrl: './project-detail.component.html',
   styleUrls: ['./project-detail.component.scss'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule, BreadcrumbComponent]
 })
+
 export class ProjectDetailComponent implements OnInit {
+
+  breadcrumbs = [
+    { label: '<-- back', path: '/projects' }
+  ]
 
   project: Project = {
     id: 0,
