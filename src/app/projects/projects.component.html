@@ -4,11 +4,36 @@
         <ul>
             <li *ngFor="let project of projects; let i = index">
                 <div class="project-card">
-                    <div class="project-details">
-                        <h3 class="ubuntu-medium ">{{ project.title }}</h3>
-                        <p class="ubuntu-regular">{{ project.description }}</p>
-                        <a [routerLink]="['/projects', project.id]">View Details</a>
+                    <div class="project-header">
+                        <h3 class="ubuntu-medium">{{ project.title }}</h3>
+                        <span class="project-status">{{ project.status }}</span>
                     </div>
+                    <p class="ubuntu-regular">{{ project.description }}</p>
+
+                    <div class="project-meta">
+                        <div>
+                            <strong>Technologies:</strong>
+                            <span>{{ project.technologies.join(', ') }}</span>
+                        </div>
+                        <div>
+                            <strong>Category:</strong>
+                            <span>{{ project.category }}</span>
+                        </div>
+                        <div>
+                            <strong>Start Date:</strong>
+                            <span>{{ project.startDate | date: 'longDate' }}</span>
+                        </div>
+                        <div>
+                            <strong>Github repo:</strong>
+                            <span> <a [href]="project.repoLink" target="_blank">{{project.title}}</a></span>
+                        </div>
+                    </div>
+
+                    <div class="project-preview">
+                        <p>{{ project.detail.content }}</p>
+                    </div>
+
+                    <a [routerLink]="['/projects', project.id]" class="view-details-btn">View Details</a>
                 </div>
                 <hr>
             </li>

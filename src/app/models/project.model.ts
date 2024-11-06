@@ -13,4 +13,5 @@ export interface Project {
     status: string;
     category: string;
     detail: ProjectDetail;
+    repoLink: string;
 }

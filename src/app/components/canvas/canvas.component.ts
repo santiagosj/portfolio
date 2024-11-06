@@ -163,36 +163,34 @@ export class P5CanvasComponent implements OnInit, OnDestroy, AfterViewInit {
     }
 
     function initColors(alphaValue: number) {
+      //-----------------------------------
+      // col = [
+      //   //  p.color(`rgba(255, 0, 0, ${alphaValue})`),
+      //   p.color(`rgba(229, 48, 65,${alphaValue})`),
+      //   p.color(`rgba(232, 112, 126,${alphaValue})`),
+      //   //  p.color(`rgba(0, 255, 255, ${alphaValue})`),
+      //   p.color(`rgba(118, 204, 200,${alphaValue})`),
+      //   p.color(`rgba(23, 180, 178,${alphaValue})`),
+      //   p.color(`rgba(118, 204, 200,${alphaValue})`),
+      //   p.color(`rgba(232, 112, 126,${alphaValue})`),
+      // ];
+      //-----------------------------------
       col = [
-        //  p.color(`rgba(255, 0, 0, ${alphaValue})`),
-        p.color(`rgba(229, 48, 65,${alphaValue})`),
-        p.color(`rgba(232, 112, 126,${alphaValue})`),
-        //  p.color(`rgba(0, 255, 255, ${alphaValue})`),
         p.color(`rgba(118, 204, 200,${alphaValue})`),
-        p.color(`rgba(23, 180, 178,${alphaValue})`),
+        p.color(`rgba(84,121,128, ${alphaValue}) `),
+        p.color(`rgba(69,173,168, ${alphaValue})`),
+        p.color(`rgba(157,224,173, ${alphaValue})`),
         p.color(`rgba(118, 204, 200,${alphaValue})`),
-        p.color(`rgba(232, 112, 126,${alphaValue})`),
+        p.color(`rgba(173,216,230,${alphaValue})`),
+        //p.color(`rgba(230, 230, 250, ${alphaValue})`), // Lavanda
+        //p.color(`rgba(221, 160, 221, ${alphaValue})`), // Ciruela clara Opcional
       ];
+      //-----------------------------------
+      //   col = [
+      //     p.color(`rgba(255, 0, 0, ${alphaValue})`), // rojo
+      //     p.color(`rgba(0, 255, 255, ${alphaValue})`), // cian
+      //   ];
     }
-
-    // function initColors(alphaValue: number) {
-    //   col = [
-    //     p.color(`rgba(84,121,128, ${alphaValue}) `),
-    //     p.color(`rgba(69,173,168, ${alphaValue})`),
-    //     p.color(`rgba(157,224,173, ${alphaValue})`),
-    //     p.color(`rgba(118, 204, 200,${alphaValue})`),
-    //     p.color(`rgba(173,216,230,${alphaValue})`),
-    //     // p.color(`rgba(230, 230, 250, ${alphaValue})`), // Lavanda
-    //     //p.color(`rgba(221, 160, 221, ${alphaValue})`), // Ciruela clara Opcional
-    //   ];
-    // }
-
-    // function initColors(alphaValue: number) {
-    //   col = [
-    //     p.color(`rgba(255, 0, 0, ${alphaValue})`), // rojo
-    //     p.color(`rgba(0, 255, 255, ${alphaValue})`), // cian
-    //   ];
-    // }
 
     p.windowResized = () => {
       const container = this.p5Container.nativeElement;

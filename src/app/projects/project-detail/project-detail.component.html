@@ -1,25 +1,86 @@
-<section *ngIf="project" class="project-detail">
-    <h1 class="ubuntu-condensed-regular">{{ project.title }}</h1>
-    <p>{{ project.description }}</p>
-    <div>
-        <strong>Status:</strong> {{ project.status }}
-    </div>
-    <div>
-        <strong>Technologies:</strong> {{ project.technologies.join(', ') }}
-    </div>
-    <div>
-        <strong>Category:</strong> {{ project.category }}
-    </div>
-    <div>
-        <strong>Details:</strong> {{ project.detail.content }}
-    </div>
-    <div *ngIf="project.detail.images && project.detail.images.length">
-        <strong>Images:</strong>
+<section *ngIf="documentation" class="project-detail">
+    <h1 class="ubuntu-condensed-regular">{{ documentation.title }}</h1>
+    <!-- <p class="title-description">{{ documentation.description }}</p> -->
+
+    <div class="content-documentation">
+        <div>
+            <strong>Status:</strong> {{ documentation.status }}
+        </div>
+        <div>
+            <strong>Technologies:</strong> {{ documentation.technologies.join(', ') }}
+        </div>
+        <div>
+            <strong>Category:</strong> {{ documentation.category }}
+        </div>
+        <div>
+            <strong>Start Date:</strong> {{ documentation.startDate | date: 'longDate' }}
+        </div>
+
+        <h2 class="ubuntu-condensed-regular">Project Overview</h2>
+        <p>{{ documentation.description }}</p>
+        <p>{{ documentation.documentation.overview }}</p>
+
+        <h3>Goals</h3>
         <ul>
-            <li *ngFor="let image of project.detail.images">
-                <img [src]="image" alt="Project image" />
+            <li *ngFor="let objective of documentation.documentation.objectives">
+                {{ objective }}
+            </li>
+        </ul>
+
+        <h3>Components</h3>
+        <ul>
+            <li *ngFor="let component of documentation.documentation.components">
+                <strong>{{ component.name }}</strong><br>
+                <p>{{ component.description }}</p>
+                <p><em>{{ component.purpose }}</em></p>
+
+                <div *ngIf="component.subcomponents && component.subcomponents.length">
+                    <strong>Sub-components:</strong>
+                    <ul>
+                        <li *ngFor="let subcomponent of component.subcomponents">
+                            <strong>{{ subcomponent.name }}</strong><br>
+                            <p>{{ subcomponent.description }}</p>
+                            <p><em>{{ subcomponent.purpose }}</em></p>
+
+                            <div *ngIf="subcomponent.subcomponents && subcomponent.subcomponents.length">
+                                <strong>Sub-sub-components:</strong>
+                                <ul>
+                                    <li *ngFor="let subsubcomponent of subcomponent.subcomponents">
+                                        <strong>{{ subsubcomponent.name }}</strong>: {{ subsubcomponent.description }}
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+        <h3>Setup Instructions</h3>
+        <div>
+            <strong>Prerequisites:</strong>
+            <ul>
+                <li *ngFor="let prerequisite of documentation.documentation.setup.prerequisites">
+                    {{ prerequisite }}
+                </li>
+            </ul>
+
+            <strong>Installation Steps:</strong>
+            <ol>
+                <li *ngFor="let step of documentation.documentation.setup.installationSteps">
+                    {{ step }}
+                </li>
+            </ol>
+            <p><em>Notes:</em> {{ documentation.documentation.setup.notes }}</p>
+        </div>
+
+        <h3>Usage</h3>
+        <ul>
+            <li *ngFor="let usage of documentation.documentation.usage">
+                {{ usage }}
             </li>
         </ul>
     </div>
+
     <app-breadcrumb [breadcrumbs]="breadcrumbs"></app-breadcrumb>
 </section>

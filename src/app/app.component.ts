@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from "./navbar/navbar.component";
-import { PageCounterComponent } from './pagecounter/pagecounter.component';
-import { LayoutComponent } from './layout/layout.component';
+import { NavbarComponent } from "./components/navbar/navbar.component";
+import { PageCounterComponent } from './components/pagecounter/pagecounter.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 @Component({
   selector: 'app-root',

@@ -7,13 +7,37 @@
     flex-direction: column;
     justify-content: center;
 
+    .title-description {
+        position: relative;
+        top: 4rem;
+    }
+
+    .content-documentation {
+        margin-top: 5rem;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        color: white;
+        line-height: 1.5;
+
+        ul {
+            li {
+                padding: 0.5rem;
+            }
+        }
+    }
+
+    .content-documentation::-webkit-scrollbar {
+        display: none;
+    }
+
     h1 {
         position: absolute;
         top: 0;
         left: -6rem
     }
 
-    li {
-        padding: 2rem;
-    }
+
+
+
 }

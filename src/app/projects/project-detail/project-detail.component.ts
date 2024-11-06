@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProjectsService } from '../../services/projects.service';
-import { Project } from '../../models/project.model';
+import { DocumentationService } from '../../services/documentation.service';
+
+import { Documentation } from '../../models/documentation.model';
 import { CommonModule } from '@angular/common';
 import { BreadcrumbComponent } from '../../components/breadcrumb/breadcrumb.component';
 @Component({
@@ -15,32 +16,42 @@ import { BreadcrumbComponent } from '../../components/breadcrumb/breadcrumb.comp
 export class ProjectDetailComponent implements OnInit {
 
   breadcrumbs = [
-    { label: '<-- back', path: '/projects' }
+    { label: '<-- Back', path: '/projects' }
   ]
 
-  project: Project = {
+  documentation: Documentation = {
     id: 0,
     title: '',
     description: '',
     technologies: [],
     startDate: new Date(),
-    status: '',
+    status: 'Not started',
     category: '',
-    detail: {
-      content: ''
-    }
-  };
+    documentation: {
+      overview: '',
+      objectives: [],
+      components: [],
+      setup: {
+        prerequisites: [],
+        installationSteps: [],
+        notes: '',
+      },
+      usage: [],
+    },
+  }
 
 
   constructor(
     private route: ActivatedRoute,
-    private projectsService: ProjectsService
+    //private projectsService: ProjectsService,
+    private documentationService: DocumentationService,
   ) { }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     if (id) {
-      this.project = this.projectsService.getProjectById(id);
+      //this.project = this.projectsService.getProjectById(id);
+      this.documentation = this.documentationService.getDocumentationById(id);
     }
   }
 }
