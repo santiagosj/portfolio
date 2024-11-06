@@ -134,27 +134,29 @@ export const projects: Project[] = [
     {
         id: 1,
         title: "Biometric Login PWA",
-        description: "This is a biometric login with ReactJS and express",
+        description: "A biometric login application built with ReactJS and Fastify, offering a secure, fast, and modern authentication method.",
         technologies: [
-            'ReactJS',
-            'TypeScript',
-            'Sass',
-            'Vite',
-            'Storybook',
-            'WebAuthN',
-            '@github/webauthn-json',
-            'express',
-            'nodejs',
-            'Atomic Desigin'
+            "ReactJS",
+            "TypeScript",
+            "Sass",
+            "Vite",
+            "Storybook",
+            "WebAuthN",
+            "@github/webauthn-json",
+            "Fastify",
+            "Node.js",
+            "Atomic Design",
+            "Redis",
+            "Docker"
         ],
         startDate: new Date("2024-01-15"),
         status: "Work in progress",
         category: "Web Development",
         detail: {
-            content: 'project 2 details',
-            // images: [],
+            content: "This project explores modern authentication through biometrics using WebAuthN, enabling passwordless login on both mobile and desktop devices. The client-side is built in React, leveraging TypeScript and Vite for performance, while the backend relies on Fastify for speed and security. Redis provides caching for session management, and Docker ensures an isolated development environment.",
+            images: []
         },
-        repoLink: "https://github.com/"
+        repoLink: "https://github.com/santiagosj/biometric-login-pwa"
     },
     {
         id: 2,
@@ -173,6 +175,82 @@ export const projects: Project[] = [
 ];
 
 export const projectDocumentation: Documentation[] = [
+    {
+        id: 1,
+        title: "Biometric Login PWA",
+        description: "A Progressive Web Application (PWA) that implements biometric login using WebAuthN, providing a secure and modern authentication solution.",
+        technologies: [
+            "ReactJS",
+            "TypeScript",
+            "Sass",
+            "Vite",
+            "Storybook",
+            "WebAuthN",
+            "@github/webauthn-json",
+            "Fastify",
+            "Node.js",
+            "Atomic Design",
+            "Redis",
+            "Docker"
+        ],
+        startDate: new Date("2024-01-15"),
+        status: "Work in progress",
+        category: "Web Development",
+        documentation: {
+            overview: "This project implements a biometric login system using WebAuthN standards, allowing users to log in without passwords on both desktop and mobile devices. It provides a PWA that is accessible across devices and built with performance and security in mind.",
+            objectives: [
+                "Implement a secure, passwordless authentication system using WebAuthN.",
+                "Build a responsive PWA with fast loading times and a smooth user experience.",
+                "Utilize a scalable architecture with Redis for session management and Docker for containerization."
+            ],
+            components: [
+                {
+                    name: "Frontend",
+                    description: "The client-side of the application, designed to support biometric authentication.",
+                    technology: "ReactJS with TypeScript and Sass",
+                    purpose: "Provides a responsive interface for user interaction and handling WebAuthN requests."
+                },
+                {
+                    name: "Authentication Service",
+                    description: "Handles user authentication requests and WebAuthN credential management.",
+                    technology: "Fastify with Node.js",
+                    purpose: "Processes user registration and login, managing WebAuthN credentials securely."
+                },
+                {
+                    name: "Session Management",
+                    description: "Session handling using Redis for improved speed and scalability.",
+                    technology: "Redis",
+                    purpose: "Caches active sessions to support high performance and reduce database load."
+                },
+                {
+                    name: "Containerization",
+                    description: "Environment setup for isolated development and deployment.",
+                    technology: "Docker",
+                    purpose: "Ensures a consistent environment across development and production."
+                }
+            ],
+            setup: {
+                prerequisites: [
+                    "Node.js and npm installed",
+                    "Docker (optional, for containerized development)",
+                    "Redis (either locally or through Docker)"
+                ],
+                installationSteps: [
+                    "Clone the repository and navigate to the project directory.",
+                    "Install dependencies with `npm install`.",
+                    "Run the frontend and backend with `npm start` (frontend) and `npm run dev` (backend).",
+                    "For Docker setup, build and run containers using `docker-compose up`."
+                ],
+                notes: "Ensure that Redis is accessible during local development for session management. You can either install it locally or use the Docker setup provided."
+            },
+            usage: [
+                "Register a new account with biometric authentication enabled.",
+                "Log in using the biometric prompt on supported devices.",
+                "Manage sessions and stored credentials from the account settings page."
+            ]
+        },
+    },
+
     {
         id: 2,
         title: "Network Monitor Lab",
@@ -288,19 +366,19 @@ export const ContactLinks: ContactLink[] = [
     {
         id: "2",
         name: "LinkedIn",
-        href: "https://www.linkedin.com/in/sanjay-singh-965/",
+        href: "https://www.linkedin.com/in/santiago-spinetto-jung-343403122/",
         class: "fab fa-linkedin fa-lg"
     },
     {
         id: "3",
         name: "GitHub",
-        href: "https://github.com/sanjay-singh-965",
+        href: "https://github.com/santiagosj",
         class: "fab fa-github fa-lg"
     },
     {
         id: "4",
         name: "Wathsapp",
-        href: "https://wa.me/919999999999",
+        href: "https://wa.me/+543513526199",
         class: "fab fa-whatsapp fa-lg"
     }
 ]
