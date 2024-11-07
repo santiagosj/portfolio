@@ -2,10 +2,11 @@
     padding: 5rem;
     background: rgb(0 0 0 / 52%);
     position: relative;
-    height: 67.4vh; //65.5vh; localhost
+    height: calc(100% - 10rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    // border: 1px solid #ffffff4e;
 
     .title-description {
         position: relative;
@@ -32,9 +33,9 @@
     }
 
     h1 {
-        position: absolute;
-        top: 0;
-        left: -6rem
+        position: fixed;
+        top: 96px;
+        left: 56px;
     }
 
 

@@ -8,13 +8,15 @@
     &::before {
         content: "";
         position: absolute;
-        top: 50px; // Desplaza el borde hacia arriba
-        left: 20px; // Desplaza el borde hacia la izquierda
-        right: 10px; // Desplaza el borde hacia la derecha
-        bottom: -20px; // Desplaza el borde hacia abajo
-        border: 1.8px solid rgb(220, 220, 220); // Establece el borde
+        top: 20px;
+        left: 20px;
+        right: 3px;
+        bottom: -20px;
+        border: 1.8px solid rgb(220, 220, 220);
         pointer-events: none; //
         z-index: -3;
+        height: 100%;
+        width: calc(100% - 30px);
     }
 }
 
