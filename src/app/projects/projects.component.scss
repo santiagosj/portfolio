@@ -1,16 +1,14 @@
 .projects {
-    padding: 5rem;
-    background: rgb(0 0 0 / 52%);
+    min-height: 300px;
+    padding: 5rem 0;
     position: relative;
-    height: calc(100% - 10rem);
+    height: calc(100% - 6rem);
     display: flex;
     flex-direction: column;
     align-items: center;
-    // border: 1px solid #ffffff4e;
-
 
     .projects-content {
-        margin-top: 2rem;
+        margin-top: 4rem;
         overflow-y: scroll;
         scrollbar-width: none;
         -ms-overflow-style: none;
@@ -20,12 +18,32 @@
 
     h1 {
         position: fixed;
-        top: 96px;
+        top: 0;
         left: 56px;
     }
 
-    li {
-        list-style-type: style;
-        padding: 2rem;
+    ul {
+        padding: 0;
+
+        li {
+            list-style-type: style;
+            padding: 0 2rem;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .projects {
+        height: calc(100% - 10rem);
+        padding: 5rem;
+        background: rgb(0 0 0 / 52%);
+
+        .projects-content {
+            margin-top: 2rem;
+        }
+
+        h1 {
+            top: 96px;
+        }
     }
 }

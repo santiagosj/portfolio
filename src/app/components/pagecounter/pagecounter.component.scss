@@ -1,18 +1,39 @@
 .page-counter {
     position: fixed;
-    bottom: 3rem; // Ajusta la distancia desde la parte inferior
-    left: 3rem; // Ajusta la distancia desde la parte izquierda
+    bottom: 3rem;
+    left: 0;
     display: flex;
-    flex-direction: column; // Cambia la dirección del flex a columna
-    align-items: center; // Centra los elementos horizontalmente
+    flex-direction: column;
+    align-items: center;
     font-size: 24px;
+    background-color: #090909;
+    z-index: 1;
+    height: 4rem;
+    justify-content: center;
+    width: 2.5rem;
 
-    &::before {
-        content: "";
-        display: block;
-        width: 1.3px; // Ajusta el grosor de la línea
-        height: 400px; // Ajusta la altura de la línea
-        background-color: rgba(220, 220, 220, 0.867); // Ajusta el color de la línea
-        margin: auto;
+}
+
+@media (min-width: 1000px) {
+    .page-counter {
+        position: fixed;
+        bottom: 3rem; // Ajusta la distancia desde la parte inferior
+        left: 3rem; // Ajusta la distancia desde la parte izquierda
+        display: flex;
+        flex-direction: column; // Cambia la dirección del flex a columna
+        align-items: center; // Centra los elementos horizontalmente
+        font-size: 24px;
+
+        &::before {
+            content: "";
+            position: fixed;
+            top: calc(50vh - 90px);
+            bottom: auto;
+            display: block;
+            width: 1.3px; // Ajusta el grosor de la línea
+            height: 50%; // Ajusta la altura de la línea
+            background-color: rgba(220, 220, 220, 0.867); // Ajusta el color de la línea
+            margin: auto;
+        }
     }
 }

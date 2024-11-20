@@ -1,23 +1,19 @@
 .about {
-    min-height: 300px;
-    padding: 5rem;
-    background: rgb(0 0 0 / 52%);
+    height: calc(100% - 2.1rem);
+    padding: 2rem;
     position: relative;
-    height: calc(100% - 10rem);
     display: flex;
     flex-direction: column;
     align-items: center;
-    // border: 1px solid #ffffff4e;
-
 
     h1 {
         position: fixed;
-        top: 96px;
+        top: 0;
         left: 56px;
     }
 
     .content-about {
-        margin-top: 5rem;
+        margin-top: 7rem;
         overflow-y: scroll;
         scrollbar-width: none;
         -ms-overflow-style: none;
@@ -25,19 +21,10 @@
         line-height: 1.5;
     }
 
-    .content-about::-webkit-scrollbar {
-        display: none;
-    }
-
     .content-about p,
     .content-about h3,
     .content-about ul {
         margin-bottom: 1rem;
-    }
-
-    .content-about h3 {
-        //font-size: 1.5rem;
-        margin-bottom: 0.5rem;
     }
 
     .contact {
@@ -53,7 +40,59 @@
             }
         }
     }
+}
 
 
 
+@media (min-width: 1000px) {
+    .about {
+        min-height: 300px;
+        padding: 5rem;
+        background: rgb(0 0 0 / 52%);
+        height: calc(100% - 10rem);
+
+        h1 {
+            position: fixed;
+            top: 96px;
+            left: 56px;
+        }
+
+        .content-about {
+            margin-top: 5rem;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            color: white;
+            line-height: 1.5;
+        }
+
+        .content-about::-webkit-scrollbar {
+            display: none;
+        }
+
+        .content-about p,
+        .content-about h3,
+        .content-about ul {
+            margin-bottom: 1rem;
+        }
+
+        .content-about h3 {
+            //font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact {
+            ul {
+                list-style: none;
+
+                li {
+                    display: inline;
+
+                    a {
+                        margin: 2rem;
+                    }
+                }
+            }
+        }
+    }
 }

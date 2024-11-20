@@ -1,9 +1,13 @@
-.home {
-    position: fixed;
-    top: 96px;
-    left: 56px;
+.home {}
 
-    h1 {
-        margin-bottom: 1rem;
+@media (min-width: 1000px) {
+    .home {
+        position: fixed;
+        top: 96px;
+        left: 56px;
+
+        h1 {
+            margin-bottom: 1rem;
+        }
     }
 }

@@ -1,3 +1,9 @@
 .app-holder {
-    padding: 3rem;
+    padding: 1rem;
+}
+
+@media (min-width: 1000px) {
+    .app-holder {
+        padding: 3rem;
+    }
 }

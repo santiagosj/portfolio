@@ -1,7 +1,14 @@
 <nav class="navbar">
     <div class="navbar-left">
-        <a routerLink="/home">Home</a> |
-        <a routerLink="/about">About</a> |
-        <a routerLink="/projects">Projects</a>
+        <div class="hamburger" [class.open]="menuOpen" (click)="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="menu" [class.open]="menuOpen">
+            <a routerLink="/home" (click)="closeMenu()">Home</a>
+            <a routerLink="/about" (click)="closeMenu()">About</a>
+            <a routerLink="/projects" (click)="closeMenu()">Projects</a>
+        </div>
     </div>
 </nav>

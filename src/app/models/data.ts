@@ -177,7 +177,7 @@ export const projects: Project[] = [
 export const projectDocumentation: Documentation[] = [
     {
         id: 1,
-        title: "Biometric Login PWA",
+        title: "Biometric Login",
         description: "A Progressive Web Application (PWA) that implements biometric login using WebAuthN, providing a secure and modern authentication solution.",
         technologies: [
             "ReactJS",
@@ -187,6 +187,7 @@ export const projectDocumentation: Documentation[] = [
             "Storybook",
             "WebAuthN",
             "@github/webauthn-json",
+            "Pwa - Service Worker - Manifest",
             "Fastify",
             "Node.js",
             "Atomic Design",
@@ -359,26 +360,14 @@ export const projectDocumentation: Documentation[] = [
 export const ContactLinks: ContactLink[] = [
     {
         id: "1",
-        name: "Email",
-        href: "mailto:sanjs965@gmail.com",
-        class: "fas fa-envelope fa-lg"
-    },
-    {
-        id: "2",
         name: "LinkedIn",
         href: "https://www.linkedin.com/in/santiago-spinetto-jung-343403122/",
         class: "fab fa-linkedin fa-lg"
     },
     {
-        id: "3",
+        id: "2",
         name: "GitHub",
         href: "https://github.com/santiagosj",
         class: "fab fa-github fa-lg"
-    },
-    {
-        id: "4",
-        name: "Wathsapp",
-        href: "https://wa.me/+543513526199",
-        class: "fab fa-whatsapp fa-lg"
     }
 ]

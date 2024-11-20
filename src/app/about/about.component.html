@@ -40,7 +40,7 @@
             <!-- <p>My contact information is available below:</p> -->
             <ul>
                 <li *ngFor="let contactLink of contactLinks">
-                    <a href={{contactLink.href}}>
+                    <a href={{contactLink.href}} target="_blank">
                         <i class={{contactLink.class}}></i>
                     </a>
                 </li>

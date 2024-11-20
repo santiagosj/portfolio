@@ -1,12 +1,11 @@
 .project-detail {
-    padding: 5rem;
+    padding: 5rem 0;
     background: rgb(0 0 0 / 52%);
     position: relative;
     height: calc(100% - 10rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // border: 1px solid #ffffff4e;
 
     .title-description {
         position: relative;
@@ -14,7 +13,7 @@
     }
 
     .content-documentation {
-        margin-top: 5rem;
+        margin-top: 6rem;
         overflow-y: scroll;
         scrollbar-width: none;
         -ms-overflow-style: none;
@@ -22,6 +21,8 @@
         line-height: 1.5;
 
         ul {
+            padding: 0;
+
             li {
                 padding: 0.5rem;
             }
@@ -33,12 +34,52 @@
     }
 
     h1 {
+        font-size: 3.5rem;
         position: fixed;
-        top: 96px;
+        top: 0;
         left: 56px;
     }
+}
 
+@media (min-width: 1000px) {
+    .project-detail {
+        padding: 5rem;
+        background: rgb(0 0 0 / 52%);
+        position: relative;
+        height: calc(100% - 10rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // border: 1px solid #ffffff4e;
 
+        .title-description {
+            position: relative;
+            top: 4rem;
+        }
 
+        .content-documentation {
+            margin-top: 5rem;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            color: white;
+            line-height: 1.5;
 
+            ul {
+                li {
+                    padding: 0.5rem;
+                }
+            }
+        }
+
+        .content-documentation::-webkit-scrollbar {
+            display: none;
+        }
+
+        h1 {
+            position: fixed;
+            top: 96px;
+            left: 56px;
+        }
+    }
 }
