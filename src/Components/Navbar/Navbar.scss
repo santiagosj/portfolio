@@ -1,0 +1,135 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+    justify-content: flex-end;
+
+    .hamburger {
+        display: flex; // Mostrar el menú hamburguesa en pantallas pequeñas
+        flex-direction: column;
+        cursor: pointer;
+        position: fixed;
+        z-index: 1;
+        right: 2rem;
+        top: 2rem;
+
+        .line {
+            background-color: white; // Líneas blancas para modo oscuro
+            height: 1px;
+            width: 30px;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+
+            // &:nth-child(1) {}
+
+            // &:nth-child(2) {}
+
+            // &:nth-child(3) {}
+        }
+
+        &.open {
+            .line:nth-child(1) {
+                background-color: #090909;
+                transform: rotate(45deg) translate(8px, 5px);
+            }
+
+            .line:nth-child(2) {
+                opacity: 0; // Ocultar la línea del medio
+            }
+
+            .line:nth-child(3) {
+                background-color: #090909;
+                transform: rotate(-45deg) translate(8px, -5px); // Girar y mover la línea inferior
+            }
+        }
+    }
+
+    .menu {
+        display: none; // Ocultar el menú por defecto en dispositivos móviles
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgb(243, 243, 243);
+        height: 50%;
+        width: 100%;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+
+        &.open {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            opacity: 1;
+            visibility: visible;
+            //color: #090909;
+        }
+
+        a {
+            margin: 1rem 0;
+            color: #090909; // Asegúrate de que los enlaces sean visibles
+            text-decoration: none;
+        }
+    }
+}
+
+// Consulta @media para pantallas más grandes
+@media (min-width: 768px) {
+    .navbar {
+        width: 92%;
+        justify-content: flex-end;
+        padding-top: 0.7rem;
+
+        .navbar-left {
+            .hamburger {
+                display: none; // Ocultar el menú hamburguesa en pantallas grandes
+            }
+
+            .menu {
+                display: flex;
+                align-items: center;
+                display: flex; // Mostrar el menú en línea en pantallas grandes
+                flex-direction: row;
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                height: auto;
+                width: auto;
+                box-shadow: none;
+                background-color: transparent;
+                padding: 0;
+
+                a:nth-child(-n+2) {
+                    border-right: 1px solid #ccc;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                    padding: 0 1rem;
+                    font-family: "Ubuntu", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: line-through;
+                        font-family: "Ubuntu", sans-serif;
+                        font-weight: 400;
+                        font-style: italic;
+                        /* Optional: underline on hover */
+                    }
+                }
+            }
+        }
+    }
+}
