@@ -9,8 +9,8 @@ const Home: React.FC = () => {
                     <h1 className="ubuntu-bold">Santiago Spinetto Jung</h1>
                     <p className="ubuntu-regular-italic hero-subtitle">DevSecOps Engineer</p>
                     <p className="hero-description">
-                        Building secure, scalable, and automated infrastructure solutions. 
-                        Passionate about integrating security throughout the development lifecycle 
+                        Building secure, scalable, and automated infrastructure solutions. <br />
+                        Passionate about integrating security throughout the development <br />
                         and implementing robust DevSecOps practices.
                     </p>
                 </div>

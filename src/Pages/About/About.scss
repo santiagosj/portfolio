@@ -32,25 +32,6 @@
 
     .skills-section {
         margin-bottom: 2rem;
-        max-height: 400px;
-        overflow-y: auto;
-
-        &::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        &::-webkit-scrollbar-track {
-            background: #111;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background: #333;
-            border-radius: 2px;
-        }
-
-        &::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
 
         h4 {
             font-size: 1.2rem;
@@ -90,25 +71,6 @@
 
     .experience-section {
         margin-bottom: 2rem;
-        max-height: 400px;
-        overflow-y: auto;
-
-        &::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        &::-webkit-scrollbar-track {
-            background: #111;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background: #333;
-            border-radius: 2px;
-        }
-
-        &::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
 
         h4 {
             font-size: 1.2rem;
@@ -168,25 +130,6 @@
 
     .education-section {
         margin-bottom: 2rem;
-        max-height: 400px;
-        overflow-y: auto;
-
-        &::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        &::-webkit-scrollbar-track {
-            background: #111;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background: #333;
-            border-radius: 2px;
-        }
-
-        &::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
 
         h4 {
             font-size: 1.2rem;
@@ -216,25 +159,133 @@
 
     @media (max-width: 768px) {
         padding: 1rem;
+        height: calc(100vh - 10rem);
 
         h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
         }
 
-        .skills-grid {
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        .skills-section {
+            margin-bottom: 1.5rem;
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+        }
+
+        .experience-section {
+            margin-bottom: 1.5rem;
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .experience-item {
+                padding: 0.5rem;
+                margin-bottom: 0.75rem;
+
+                h4 {
+                    font-size: 0.9rem;
+                }
+
+                .responsibilities {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        .education-section {
+            margin-bottom: 1.5rem;
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            ul {
+                li {
+                    font-size: 0.8rem;
+                }
+            }
         }
     }
 
     @media (max-width: 480px) {
-        padding: 1rem;
+        padding: 0.75rem;
+        height: calc(100vh - 6rem);
 
         h2 {
             font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
 
-        .skills-grid {
-            grid-template-columns: 1fr;
+        .skills-section {
+            margin-bottom: 1rem;
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 0.25rem;
+
+                .skill-category {
+                    h5 {
+                        font-size: 0.85rem;
+                    }
+
+                    ul {
+                        li {
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .experience-section {
+            margin-bottom: 1rem;
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            .experience-item {
+                padding: 0.4rem;
+                margin-bottom: 0.5rem;
+
+                h4 {
+                    font-size: 0.85rem;
+                }
+
+                .company {
+                    font-size: 0.75rem;
+                }
+
+                .responsibilities {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+
+        .education-section {
+            margin-bottom: 1rem;
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            ul {
+                li {
+                    font-size: 0.75rem;
+                }
+            }
         }
     }
 }
