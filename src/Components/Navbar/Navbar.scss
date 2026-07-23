@@ -109,7 +109,7 @@
                 background-color: transparent;
                 padding: 0;
 
-                a:nth-child(-n+2) {
+                a:nth-child(-n+3) {
                     border-right: 1px solid #ccc;
                 }
 
@@ -117,14 +117,14 @@
                     text-decoration: none;
                     color: inherit;
                     padding: 0 1rem;
-                    font-family: "Ubuntu", sans-serif;
+                    font-family: 'Courier New', monospace;
                     font-weight: 400;
                     font-style: normal;
 
                     &:hover {
                         cursor: pointer;
                         text-decoration: line-through;
-                        font-family: "Ubuntu", sans-serif;
+                        font-family: 'Courier New', monospace;
                         font-weight: 400;
                         font-style: italic;
                         /* Optional: underline on hover */

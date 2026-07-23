@@ -35,6 +35,9 @@ const Navar: React.FC<Props> = () => {
                     <Link to="/projects" onClick={closeMenu} className="">
                         Projects
                     </Link>
+                    <Link to="/posts" onClick={closeMenu} className="">
+                        Posts
+                    </Link>
                 </div>
             </div>
         </nav>

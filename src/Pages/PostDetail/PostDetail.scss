@@ -1,0 +1,244 @@
+.post-detail {
+    max-width: 800px;
+    //margin: 0 auto;
+    padding: 2rem;
+    color: #c4c4c4;
+    font-family: 'Courier New', monospace;
+    height: calc(100vh - 16rem);
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.3882352941);
+    position: relative;
+    top: 1.5rem;
+    border: 1px solid #333;
+
+    .back-link {
+        display: inline-block;
+        color: #888;
+        text-decoration: none;
+        margin-bottom: 2rem;
+        font-weight: 400;
+        font-family: 'Courier New', monospace;
+
+        &:hover {
+            color: #eda8d8;
+        }
+    }
+
+    .post-header {
+        margin-bottom: 2rem;
+
+        h1 {
+            font-size: 1.5rem;
+            color: #eda8d8;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+
+            .post-category {
+                background: #000;
+                color: #888;
+                padding: 0.25rem 0.5rem;
+                border: 1px solid #333;
+                font-size: 0.8rem;
+                font-weight: 400;
+                font-family: 'Courier New', monospace;
+            }
+
+            .featured-badge {
+                background: #c4a7e7;
+                color: #000;
+                padding: 0.25rem 0.5rem;
+                font-size: 0.8rem;
+                font-weight: bold;
+                font-family: 'Courier New', monospace;
+            }
+        }
+    }
+
+    .post-overview {
+        margin-bottom: 2rem;
+
+        .post-description {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+            color: #c4c4c4;
+            font-family: 'Courier New', monospace;
+        }
+
+        .post-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+
+            .info-section {
+                background: #000;
+                border: 1px solid #333;
+                border-radius: 4px;
+                padding: 0.75rem;
+                font-family: 'Courier New', monospace;
+
+                h3 {
+                    color: #c4a7e7;
+                    margin-bottom: 1rem;
+                    font-size: 1rem;
+                    font-family: 'Courier New', monospace;
+                    font-weight: bold;
+                }
+
+                p {
+                    color: #c4c4c4;
+                    margin: 0;
+                    font-family: 'Courier New', monospace;
+                }
+
+                .tech-list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 0.125rem;
+
+                    .tech-tag {
+                        background: #000;
+                        color: #888;
+                        padding: 0.125rem 0.25rem;
+                        border-radius: 2px;
+                        font-size: 0.7rem;
+                        border: 1px solid #333;
+                        font-family: 'Courier New', monospace;
+                    }
+                }
+            }
+        }
+    }
+
+    .post-sections {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+
+        .section {
+            background: #000;
+            border-left: 2px solid #c4a7e791;
+            border-radius: 0 4px 4px 0;
+            padding: 0.75rem;
+            font-family: 'Courier New', monospace;
+
+            h3 {
+                color: #c4a7e7;
+                margin-bottom: 1rem;
+                font-size: 1rem;
+                font-family: 'Courier New', monospace;
+                font-weight: bold;
+            }
+
+            ul {
+                margin: 0;
+                padding-left: 1.5rem;
+
+                li {
+                    margin-bottom: 0.5rem;
+                    line-height: 1.4;
+                    color: #c4c4c4;
+                    font-family: 'Courier New', monospace;
+                    font-size: 0.8rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &::marker {
+                        color: #eda8d8;
+                    }
+                }
+            }
+        }
+    }
+
+    .post-links {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        .post-link {
+            display: inline-block;
+            background: #000;
+            color: #c4a7e7;
+            padding: 0.375rem 0.75rem;
+            text-decoration: none;
+            font-weight: 400;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #333;
+            font-family: 'Courier New', monospace;
+            font-size: 0.75rem;
+
+            &:hover {
+                background: rgba(237, 168, 216, 0.1);
+                border-color: #eda8d8;
+                color: #fff;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 1rem;
+        height: calc(100vh - 10rem);
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: transparent;
+        }
+        h1 {
+            font-size: 1.2rem;
+        }
+
+        .post-meta {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .post-info-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .post-sections {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .post-links {
+            flex-direction: column;
+
+            .post-link {
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .post-header h1 {
+            font-size: 1rem;
+        }
+
+        .post-overview .post-description {
+            font-size: 0.8rem;
+        }
+    }
+}

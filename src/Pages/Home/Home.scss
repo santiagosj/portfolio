@@ -5,6 +5,33 @@
     color: #c4c4c4;
     font-family: 'Courier New', monospace;
 
+    .enjoy-the-noise-btn {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;      
+        background: #000;
+        border: 1px solid #eda8d8;
+        color: #eda8d8;
+        padding: 0.5rem 1rem;
+        font-family: 'Courier New', monospace;
+        font-size: 0.8rem;
+        cursor: pointer;
+        z-index: 1000;
+
+        &:hover {
+            background: rgba(237, 168, 216, 0.2);
+            border-color: #c4a7e7;
+        }
+    }
+
+    .canvas-hidden {
+        display: none;
+        .main-layout {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
     .main-layout {
         display: flex;
         gap: 3rem;
