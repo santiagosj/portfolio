@@ -14,56 +14,56 @@ interface Post {
 const Posts: React.FC = () => {
     const posts: Post[] = [
         {
-            id: "devsecops-best-practices",
-            title: "Understanding DevSecOps Best Practices",
-            description: "Comprehensive guide exploring essential components that form the foundation of a successful DevSecOps strategy in today's evolving threat landscape.",
-            technologies: ["IaC", "CI/CD", "Monitoring", "Compliance"],
-            category: "DevSecOps",
+            id: "htb-linux-privesc",
+            title: "HTB: Linux Privilege Escalation Deep Dive",
+            description: "Writeup detallado de tecnicas de escalada de privilegios en Linux aplicadas en maquinas HTB: SUID abuse, capabilities, cron jobs, LPE kernel exploits, y PATH hijacking. Metodologia paso a paso con comandos y outputs.",
+            technologies: ["Linux", "Bash", "Python", "GTFOBins", "pspy", "linpeas"],
+            category: "HTB",
             featured: true
         },
         {
-            id: "container-security",
-            title: "Container Security Best Practices",
-            description: "Essential practices for securing containerized environments including image security, runtime protection, and orchestration strategies.",
-            technologies: ["Docker", "Kubernetes", "Security", "Compliance"],
-            category: "Security",
+            id: "htb-windows-privesc",
+            title: "HTB: Windows Privilege Escalation Techniques",
+            description: "Compilado de tecnicas de escalada en Windows de maquinas HTB: Token Impersonation, SeBackupPrivilege, UAC bypass, service misconfigurations, DLL hijacking, y AlwaysInstallElevated.",
+            technologies: ["Windows", "PowerShell", "WinPEAS", "SharpUp", "Metasploit"],
+            category: "HTB",
             featured: true
         },
         {
-            id: "cloud-security-architecture",
-            title: "Cloud Security Architecture",
-            description: "Designing secure cloud architectures with multi-layered security approach while maintaining scalability and operational efficiency.",
-            technologies: ["AWS", "Azure", "Zero-Trust", "Encryption"],
-            category: "Architecture",
+            id: "htb-ad-attacks",
+            title: "HTB: Active Directory Attack Paths",
+            description: "Writeups de maquinas HTB con Active Directory: AS-REP roasting, kerberoasting, ACL abuse, DCSync, Kerberos delegation, y ataque a trusts. Mapas de attack paths con BloodHound incluidos.",
+            technologies: ["BloodHound", "Impacket", "Responder", "CrackMapExec", "AD", "Kerberos"],
+            category: "HTB",
+            featured: true
+        },
+        {
+            id: "htb-web-exploitation",
+            title: "HTB: Web Exploitation & Pivoting",
+            description: "Writeups de maquinas HTB enfocadas en explotacion web (SQLi, SSTI, LFI/RFI, deserialization) combinada con tunneling y pivoting a traves de redes internas para comprometer otros hosts.",
+            technologies: ["Burp Suite", "SQLMap", "ffuf", "Chisel", "Ligolo-ng", "Python"],
+            category: "HTB",
             featured: false
         },
         {
-            id: "kubernetes-security",
-            title: "Kubernetes Security Hardening",
-            description: "Comprehensive security framework for Kubernetes clusters including network policies, RBAC, and runtime security monitoring strategies.",
-            technologies: ["Kubernetes", "Falco", "OPA", "Network Policies"],
-            category: "Security",
+            id: "htb-tunneling-pivoting",
+            title: "HTB: Tunneling, Pivoting & Port Forwarding",
+            description: "Guia de tecnicas de tunneling y pivoting aplicadas en maquinas HTB: SSH tunneling, Chisel SOCKS proxy, Ligolo-ng, port forwarding con plink, y rutas de pivoting multi-hop.",
+            technologies: ["SSH", "Chisel", "Ligolo-ng", "proxychains", "plink", "nmap"],
+            category: "HTB",
             featured: false
         },
         {
-            id: "infrastructure-as-code",
-            title: "Infrastructure as Code Guide",
-            description: "Best practices for implementing infrastructure as code with Terraform, including state management, security, and cost optimization.",
-            technologies: ["Terraform", "Terragrunt", "AWS", "Azure"],
-            category: "Infrastructure",
-            featured: true
-        },
-        {
-            id: "security-monitoring",
-            title: "Security Monitoring & SIEM",
-            description: "Building comprehensive security monitoring solutions with SIEM integration, automated threat detection, and incident response workflows.",
-            technologies: ["ELK", "Prometheus", "Grafana", "Wazuh"],
-            category: "Monitoring",
+            id: "htb-recon-methodology",
+            title: "HTB: Reconnaissance & Enumeration Playbook",
+            description: "Playbook de reconocimiento y enumeracion para maquinas HTB: desde el escaneo inicial con nmap hasta la enumeracion profunda de servicios, usuarios, y vulnerabilidades. Automatizacion con scripts custom.",
+            technologies: ["nmap", "ffuf", "Gobuster", "enum4linux", "smbclient", "Bash"],
+            category: "HTB",
             featured: false
         }
     ];
 
-    const categories = ["All", "DevSecOps", "Security", "Architecture", "Infrastructure", "Monitoring"];
+    const categories = ["All", "HTB", "Techniques", "Methodology"];
     const [selectedCategory, setSelectedCategory] = React.useState("All");
 
     const filteredPosts = selectedCategory === "All" 
@@ -74,7 +74,7 @@ const Posts: React.FC = () => {
         <div className="posts-content">
 
             <h2 className="ubuntu-bold">Posts</h2>
-            <p className="ubuntu-regular">Technical Blog and DevSecOps Insights</p>
+            <p className="ubuntu-regular">HackTheBox Writeups & Security Research</p>
 
             <div className="category-filter">
                 {categories.map(category => (

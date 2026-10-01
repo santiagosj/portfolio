@@ -6,6 +6,7 @@
     font-family: 'Courier New', monospace;
     height: calc(100vh - 16rem);
     overflow-y: auto;
+    scrollbar-width: none;
     background: rgba(0, 0, 0, 0.3882352941);
     position: relative;
     top: 1.5rem;

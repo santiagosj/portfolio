@@ -8,82 +8,80 @@ interface Project {
     description: string;
     technologies: string[];
     category: string;
+    team: "Red Team" | "Blue Team";
     featured: boolean;
 }
 
 const Projects: React.FC = () => {
     const projects: Project[] = [
         {
-            id: "secure-cicd-pipeline",
-            title: "Secure CI/CD Pipeline",
-            description: "Enterprise-grade CI/CD pipeline with integrated security scanning, automated compliance checks, and zero-downtime deployments.",
-            technologies: ["Jenkins", "Docker", "Kubernetes", "SonarQube", "Trivy"],
-            category: "DevSecOps",
+            id: "web-pentest-writeups",
+            title: "Web Application Pentest Lab — Writeups & Methodology",
+            description: "Laboratorio propio de pentesting web con aplicaciones vulnerables (OWASP Juice Shop, DVWA, Altoro Mutual). Documentacion completa de metodologia: reconocimiento → enumeracion → explotacion → post-explotacion, con screenshots y hallazgos.",
+            technologies: ["Burp Suite", "OWASP ZAP", "SQLMap", "ffuf", "Python", "JavaScript"],
+            category: "Pentesting",
+            team: "Red Team",
             featured: true
         },
         {
-            id: "kubernetes-security-hardening",
-            title: "Kubernetes Security Hardening",
-            description: "Comprehensive security framework for Kubernetes clusters including network policies, RBAC, and runtime security monitoring.",
-            technologies: ["Kubernetes", "Falco", "OPA/Gatekeeper", "Istio", "Calico"],
-            category: "Security",
+            id: "privesc-arsenal",
+            title: "Privilege Escalation Arsenal",
+            description: "Toolkit de escalada de privilegios para Linux y Windows. Scripts de enumeracion automatizada, exploits compilados, y tecnicas documentadas: SUID/Capabilities abuse, Token Impersonation, UAC bypass, SeBackupPrivilege, y mas. Preparacion activa para OSCP.",
+            technologies: ["Python", "Bash", "PowerShell", "C", "Linux", "Windows"],
+            category: "Pentesting",
+            team: "Red Team",
             featured: true
         },
         {
-            id: "infrastructure-as-code",
-            title: "Infrastructure as Code Platform",
-            description: "Terraform-based infrastructure automation with multi-cloud support and cost optimization strategies.",
-            technologies: ["Terraform", "AWS", "Azure", "Terragrunt", "Infracost"],
-            category: "Infrastructure",
-            featured: false
-        },
-        {
-            id: "security-monitoring",
-            title: "Security Monitoring Dashboard",
-            description: "Real-time security monitoring and alerting system with SIEM integration and automated incident response.",
-            technologies: ["ELK Stack", "Prometheus", "Grafana", "Wazuh", "TheHive"],
-            category: "Security",
-            featured: false
-        },
-        {
-            id: "container-security",
-            title: "Container Security Scanner",
-            description: "Automated container vulnerability scanning and image signing pipeline with policy enforcement.",
-            technologies: ["Docker", "Trivy", "Notary", "Harbor", "Kyverno"],
-            category: "Security",
+            id: "ad-lab",
+            title: "Active Directory Lab & Attack Paths",
+            description: "Laboratorio de AD montado en casa con multiples dominios, trusts, y ACLs complejas. Documentacion de attack paths completos: AS-REP roasting → kerberoasting → ACL abuse → DCSync. Mapa de relaciones con BloodHound.",
+            technologies: ["Windows Server", "BloodHound", "Impacket", "CrackMapExec", "Responder", "krbrelay"],
+            category: "Pentesting",
+            team: "Red Team",
             featured: true
         },
         {
-            id: "compliance-automation",
-            title: "Compliance Automation Framework",
-            description: "Automated compliance reporting and audit trail system for SOC2 and ISO27001 standards.",
-            technologies: ["Python", "AWS Config", "OpenSCAP", "CIS Benchmarks"],
-            category: "Compliance",
+            id: "secure-k8s-lab",
+            title: "Kubernetes Security Hardening & Runtime Monitoring",
+            description: "Cluster K8s con hardening completo: network policies, RBAC de minimo privilegio, Falco para deteccion en runtime, y threat modeling STRIDE. Scripts automatizados para deploy y validacion de seguridad.",
+            technologies: ["Kubernetes", "Falco", "Calico", "Helm", "kind", "Bash"],
+            category: "Kubernetes Security",
+            team: "Blue Team",
+            featured: true
+        },
+        {
+            id: "wazuh-home-siem",
+            title: "Home Lab SIEM con Wazuh",
+            description: "SIEM centralizado con Wazuh all-in-one. Agentes en Linux y Windows con Sysmon, FIM, deteccion de vulnerabilidades, y dashboards personalizados para monitoreo de seguridad en tiempo real.",
+            technologies: ["Wazuh", "Elasticsearch", "Sysmon", "Linux", "Windows"],
+            category: "SIEM",
+            team: "Blue Team",
             featured: false
         }
     ];
 
-    const categories = ["All", "DevSecOps", "Security", "Infrastructure", "Compliance"];
-    const [selectedCategory, setSelectedCategory] = React.useState("All");
+    const teams = ["All", "Red Team", "Blue Team"];
+    const [selectedTeam, setSelectedTeam] = React.useState("All");
 
-    const filteredProjects = selectedCategory === "All" 
+    const filteredProjects = selectedTeam === "All" 
         ? projects 
-        : projects.filter(project => project.category === selectedCategory);
+        : projects.filter(project => project.team === selectedTeam);
 
     return (
         <div className="projects-content">
 
             <h2 className="ubuntu-bold">Projects</h2>
-            <p className="ubuntu-regular">DevSecOps and Infrastructure Security Projects</p>
+            <p className="ubuntu-regular">Red Team · Blue Team · Security Projects</p>
 
             <div className="category-filter">
-                {categories.map(category => (
+                {teams.map(team => (
                     <button
-                        key={category}
-                        className={`category-btn ${selectedCategory === category ? 'active' : ''}`}
-                        onClick={() => setSelectedCategory(category)}
+                        key={team}
+                        className={`category-btn ${selectedTeam === team ? 'active' : ''}`}
+                        onClick={() => setSelectedTeam(team)}
                     >
-                        {category}
+                        {team}
                     </button>
                 ))}
             </div>
@@ -94,7 +92,7 @@ const Projects: React.FC = () => {
                         
                         <div className="project-header">
                             <h3 className="ubuntu-medium">{project.title}</h3>
-                            <span className="project-category">{project.category}</span>
+                            <span className="project-category">{project.team}</span>
                         </div>
 
                         <p className="project-description">{project.description}</p>

@@ -21,131 +21,170 @@ const ProjectDetail: React.FC = () => {
     const { projectId } = useParams<{ projectId: string }>();
 
     const projectsData: Record<string, ProjectDetail> = {
-        "secure-cicd-pipeline": {
-            id: "secure-cicd-pipeline",
-            title: "Secure CI/CD Pipeline",
-            description: "Enterprise-grade CI/CD pipeline with integrated security scanning",
-            longDescription: "A comprehensive CI/CD solution that integrates security scanning at every stage of the development lifecycle. This pipeline implements automated vulnerability scanning, dependency checks, code quality analysis, and compliance validation to ensure secure software delivery.",
-            technologies: ["Jenkins", "Docker", "Kubernetes", "SonarQube", "Trivy", "OWASP Dependency Check"],
-            category: "DevSecOps",
+        "web-pentest-writeups": {
+            id: "web-pentest-writeups",
+            title: "Web Application Pentest Lab — Writeups & Methodology",
+            description: "Laboratorio propio de pentesting web con aplicaciones vulnerables",
+            longDescription: "Laboratorio completo de pentesting web con OWASP Juice Shop, DVWA, Altoro Mutual y aplicaciones custom. Documentación exhaustiva de metodología: reconocimiento inicial, enumeración de endpoints, explotación de vulnerabilidades OWASP Top 10, y post-explotación con persistencia de acceso. Cada writeup incluye screenshots, payloads utilizados, y recomendaciones de mitigación.",
+            technologies: ["Burp Suite", "OWASP ZAP", "SQLMap", "ffuf", "Python", "JavaScript"],
+            category: "Pentesting",
             featured: true,
-            githubUrl: "https://github.com/example/secure-cicd",
             challenges: [
-                "Integrating multiple security tools without slowing down deployment",
-                "Implementing proper secret management across the pipeline",
-                "Ensuring compliance with industry security standards"
+                "Encontrar vulnerabilidades en aplicaciones que no tienen documentación",
+                "Documentar cada paso de forma reproducible",
+                "Crear payloads personalizados para bypass de filtros"
             ],
             achievements: [
-                "Reduced security vulnerabilities by 60% in production",
-                "Achieved 99.9% uptime with zero-downtime deployments",
-                "Passed SOC2 Type II compliance audit"
+                "Documentación completa de 10+ vulnerabilidades OWASP Top 10",
+                "Metodología reproducible paso a paso",
+                "Writeups con screenshots y payloads funcionales"
             ],
-            timeline: "6 months (2023)"
+            timeline: "En curso (2024 - Presente)"
         },
-        "kubernetes-security-hardening": {
-            id: "kubernetes-security-hardening",
-            title: "Kubernetes Security Hardening",
-            description: "Comprehensive security framework for Kubernetes clusters",
-            longDescription: "A multi-layered security approach for Kubernetes environments implementing network policies, RBAC, pod security standards, runtime security monitoring, and automated compliance checking.",
-            technologies: ["Kubernetes", "Falco", "OPA/Gatekeeper", "Istio", "Calico", "Kyverno"],
-            category: "Security",
+        "privesc-arsenal": {
+            id: "privesc-arsenal",
+            title: "Privilege Escalation Arsenal",
+            description: "Toolkit de escalada de privilegios para Linux y Windows",
+            longDescription: "Toolkit integral de escalada de privilegios para entornos Linux y Windows, construido como preparacion activa para el OSCP. Incluye scripts de enumeracion automatizada (similares a LinPEAS/WinPEAS pero con enfoque en técnicas específicas), exploits compilados listos para usar, y documentacion detallada de cada técnica. Cubre: abuso de SUID/SGID, capabilities, cron jobs, PATH hijacking en Linux; Token Impersonation, SeBackupPrivilege, SeImpersonatePrivilege, UAC bypass, service misconfigurations en Windows. Cada técnica incluye casos reales de HTB y labs.",
+            technologies: ["Python", "Bash", "PowerShell", "C", "Linux", "Windows", "Metasploit"],
+            category: "Pentesting",
             featured: true,
-            githubUrl: "https://github.com/example/k8s-security",
+            githubUrl: "https://github.com/example/privesc-arsenal",
             challenges: [
-                "Balancing security with developer productivity",
-                "Implementing fine-grained network policies",
-                "Real-time threat detection and response"
+                "Compilar exploits para distintas versiones de kernel/OS",
+                "Automatizar enumeracion sin dejar trazas evidentes",
+                "Mantener el toolkit actualizado con nuevas técnicas"
             ],
             achievements: [
-                "Zero security incidents in 12 months",
-                "Automated 90% of security compliance checks",
-                "Reduced attack surface by 75%"
+                "20+ técnicas de Linux privesc documentadas y funcionales",
+                "15+ técnicas de Windows privesc con scripts automatizados",
+                "Usado como referencia activa en preparacion OSCP"
             ],
-            timeline: "4 months (2023)"
+            timeline: "En curso (2024 - Presente)"
         },
-        "infrastructure-as-code": {
-            id: "infrastructure-as-code",
-            title: "Infrastructure as Code Platform",
-            description: "Terraform-based infrastructure automation with multi-cloud support",
-            longDescription: "Enterprise infrastructure as code solution supporting multiple cloud providers with cost optimization, automated testing, and compliance validation.",
-            technologies: ["Terraform", "AWS", "Azure", "Terragrunt", "Infracost", "Checkov"],
-            category: "Infrastructure",
-            featured: false,
-            githubUrl: "https://github.com/example/iac-platform",
-            challenges: [
-                "Managing multi-cloud infrastructure complexity",
-                "Implementing proper state management",
-                "Cost optimization without sacrificing security"
-            ],
-            achievements: [
-                "Reduced infrastructure provisioning time by 80%",
-                "Achieved 30% cost savings through optimization",
-                "100% infrastructure compliance with security policies"
-            ],
-            timeline: "3 months (2022)"
-        },
-        "security-monitoring": {
-            id: "security-monitoring",
-            title: "Security Monitoring Dashboard",
-            description: "Real-time security monitoring and alerting system",
-            longDescription: "Comprehensive security monitoring solution with SIEM integration, automated threat detection, and incident response workflows.",
-            technologies: ["ELK Stack", "Prometheus", "Grafana", "Wazuh", "TheHive", "Cortex"],
-            category: "Security",
-            featured: false,
-            githubUrl: "https://github.com/example/security-monitoring",
-            challenges: [
-                "Processing high-volume security logs",
-                "Reducing false positive alerts",
-                "Integrating multiple security tools"
-            ],
-            achievements: [
-                "Reduced incident response time by 70%",
-                "Achieved 95% alert accuracy",
-                "Monitored 500+ security events per second"
-            ],
-            timeline: "5 months (2023)"
-        },
-        "container-security": {
-            id: "container-security",
-            title: "Container Security Scanner",
-            description: "Automated container vulnerability scanning and image signing",
-            longDescription: "End-to-end container security solution implementing vulnerability scanning, image signing, policy enforcement, and runtime protection.",
-            technologies: ["Docker", "Trivy", "Notary", "Harbor", "Kyverno", "Sigstore"],
-            category: "Security",
+        "pentest-reporting-engine": {
+            id: "pentest-reporting-engine",
+            title: "Custom Pentest Reporting Engine",
+            description: "Generador de reportes de pentest profesionales",
+            longDescription: "Generador de reportes de pentest construido con React + TypeScript + Node.js. Templates personalizables para diferentes tipos de assessments (web, network, AD), scoring CVSS v3.1 con calculadora integrada, gráficos de severidad interactivos con Chart.js, y exportación a formatos profesionales (PDF con Playwright, XLSX con ExcelJS). Diseñado para acelerar la generación de reportes post-pentest manteniendo consistencia y profesionalismo.",
+            technologies: ["React", "TypeScript", "Node.js", "Chart.js", "Playwright", "ExcelJS"],
+            category: "Tools",
             featured: true,
-            githubUrl: "https://github.com/example/container-security",
+            githubUrl: "https://github.com/example/pentest-reporting-engine",
             challenges: [
-                "Scanning containers without impacting build performance",
-                "Implementing proper key management for image signing",
-                "Enforcing policies across different environments"
+                "Implementar scoring CVSS v3.1 correcto con vectores completos",
+                "Generar PDFs con formato profesional y consistente",
+                "Mantener templates flexibles para distintos tipos de assessments"
             ],
             achievements: [
-                "Scanned 10,000+ containers per day",
-                "Prevented 200+ vulnerable deployments",
-                "Achieved 100% container image signing compliance"
+                "Reducción del 80% en tiempo de generación de reportes",
+                "Templates para web, network y AD assessments",
+                "Exportación a PDF, XLSX y DOCX"
             ],
-            timeline: "4 months (2023)"
+            timeline: "3 meses (2024)"
         },
-        "compliance-automation": {
-            id: "compliance-automation",
-            title: "Compliance Automation Framework",
-            description: "Automated compliance reporting and audit trail system",
-            longDescription: "Automated compliance management system supporting SOC2, ISO27001, and CIS benchmarks with continuous monitoring and reporting.",
-            technologies: ["Python", "AWS Config", "OpenSCAP", "CIS Benchmarks", "Aqua Security"],
-            category: "Compliance",
+        "recon-scanner": {
+            id: "recon-scanner",
+            title: "Automated Recon & Vulnerability Scanner",
+            description: "Script de automatización de reconocimiento para pentesting web",
+            longDescription: "Pipeline automatizado de reconocimiento para pentesting web. Orquesta múltiples herramientas en fases: subdomain enumeration (subfinder, assetfinder), port scanning (nmap, masscan), technology fingerprinting (httpx, wappalyzer), directory brute-forcing (ffuf, dirsearch), y vulnerability scanning (nuclei). Pipeline completamente configurable vía YAML, con output estructurado en JSON para integración con otras herramientas.",
+            technologies: ["Python", "Bash", "subfinder", "httpx", "nuclei", "ffuf"],
+            category: "Automation",
             featured: false,
-            githubUrl: "https://github.com/example/compliance-framework",
+            githubUrl: "https://github.com/example/recon-scanner",
             challenges: [
-                "Mapping technical controls to compliance requirements",
-                "Automating evidence collection",
-                "Maintaining audit trail integrity"
+                "Orquestar herramientas con distintos formatos de output",
+                "Evitar rate limiting y detección durante el escaneo",
+                "Priorizar hallazgos críticos en targets grandes"
             ],
             achievements: [
-                "Reduced audit preparation time by 85%",
-                "Achieved 100% compliance with SOC2 Type II",
-                "Automated 95% of evidence collection"
+                "Automatización completa de la fase de reconocimiento",
+                "Output unificado en JSON para pipeline CI/CD",
+                "Configuración modular por tipo de assessment"
             ],
-            timeline: "6 months (2022-2023)"
+            timeline: "2 meses (2024)"
+        },
+        "browser-extension-security-auditor": {
+            id: "browser-extension-security-auditor",
+            title: "Browser Extension Security Auditor",
+            description: "Chrome/Firefox extension que analiza seguridad de sitios web en tiempo real",
+            longDescription: "Extensión para Chrome y Firefox que audita la seguridad de sitios web en tiempo real. Detecta: missing o malconfigurados security headers (HSTS, CSP, X-Frame-Options), cookies sin flags Secure/HttpOnly/SameSite, CORS misconfigurations que permiten origins externos, CSP weaknesses que permiten inline scripts, y exposición de información sensible en el DOM. Aprovecha el background en desarrollo web para identificar falsos positivos y entender el contexto de cada hallazgo.",
+            technologies: ["JavaScript", "Chrome Extensions API", "React"],
+            category: "Web Security",
+            featured: false,
+            githubUrl: "https://github.com/example/browser-security-auditor",
+            challenges: [
+                "Acceder a headers y cookies desde la extension API",
+                "Minimizar falsos positivos con análisis contextual",
+                "Mantener compatibilidad entre Chrome y Firefox APIs"
+            ],
+            achievements: [
+                "Detección de 15+ tipos de misconfiguraciones de seguridad",
+                "Interfaz limpia con severidad y recomendaciones",
+                "Open source con contribuciones de la comunidad"
+            ],
+            timeline: "2 meses (2024)"
+        },
+        "ad-lab": {
+            id: "ad-lab",
+            title: "Active Directory Lab & Attack Paths",
+            description: "Laboratorio de AD con múltiples dominios y attack paths documentados",
+            longDescription: "Laboratorio de Active Directory montado en casa con múltiples dominios, trusts transitivos y no transitivos, y ACLs complejas. Documentación completa de attack paths: AS-REP roasting contra usuarios sin pre-autenticación, kerberoasting de SPNs, abuso de ACLs (ForceChangePassword, WriteOwner, GenericAll), DCSync para dumpear hashes de KRBTGT, y Golden/Silver Ticket attacks. Mapa de relaciones generado con BloodHound para visualizar attack paths completos.",
+            technologies: ["Windows Server", "BloodHound", "Impacket", "CrackMapExec", "Responder", "krbrelay"],
+            category: "Pentesting",
+            featured: false,
+            challenges: [
+                "Configurar trusts entre dominios con relaciones complejas",
+                "Encadenar múltiples ataques en un solo attack path",
+                "Documentar ACL abuse paths con BloodHound"
+            ],
+            achievements: [
+                "Lab multi-dominio con trusts y ACLs complejas",
+                "Attack paths documentados desde usuario estándar hasta DA",
+                "Mapas de relación generados con BloodHound Custom Queries"
+            ],
+            timeline: "En curso (2024 - Presente)"
+        },
+        "secure-k8s-lab": {
+            id: "secure-k8s-lab",
+            title: "Kubernetes Security Hardening & Runtime Monitoring",
+            description: "Cluster K8s con hardening completo y Falco runtime security",
+            longDescription: "Laboratorio de seguridad en Kubernetes desplegado con kind. Implementación completa de hardening: default-deny network policies, RBAC de mínimo privilegio con ServiceAccount sin automount de tokens, Falco con driver modern_ebpf para detección de amenazas en runtime (shell en containers, mount privilegiados, writes sensibles), y alertas vía falcosidekick. Incluye scripts automatizados para deploy, validación de seguridad, y simulación de ataques para verificar detección. Threat modeling STRIDE aplicado a la arquitectura del cluster.",
+            technologies: ["Kubernetes", "Falco", "Calico", "Helm", "kind", "Bash"],
+            category: "Kubernetes Security",
+            featured: true,
+            githubUrl: "https://github.com/example/secure-k8s-lab",
+            challenges: [
+                "Configurar Falco con eBPF sin afectar performance del cluster",
+                "Definir network policies que no rompan la funcionalidad de la app",
+                "Simular ataques realistas sin dañar el ambiente de laboratorio"
+            ],
+            achievements: [
+                "Cluster K8s con defense-in-depth fully automated via scripts",
+                "Falco detectando shells reversos, mount privilegiados y writes sensibles",
+                "Threat modeling STRIDE documentado para cada componente"
+            ],
+            timeline: "3 meses (2025)"
+        },
+        "wazuh-home-siem": {
+            id: "wazuh-home-siem",
+            title: "Home Lab SIEM con Wazuh",
+            description: "SIEM centralizado con Wazuh, Sysmon y dashboards de seguridad",
+            longDescription: "SIEM completo desplegado con Wazuh all-in-one (manager + indexer + dashboard). Agentes instalados en Linux y Windows con telemetría enriquecida: Sysmon en Windows para logging detallado de procesos y conexiones de red, auditoría de seguridad en Linux. Casos de uso de detección implementados: brute force detection, FIM (File Integrity Monitoring) en directorios críticos, detección de malware con YARA, y escaneo de vulnerabilidades. Dashboards personalizados para visualizar autenticaciones, cambios de privilegios y eventos de seguridad en tiempo real.",
+            technologies: ["Wazuh", "Elasticsearch", "Sysmon", "Linux", "Windows", "YARA"],
+            category: "SIEM",
+            featured: false,
+            challenges: [
+                "Dimensionar recursos del SIEM para el laboratorio doméstico",
+                "Enriquecer eventos con Sysmon sin saturar el índice",
+                "Crear dashboards útiles que no sean solo ruido visual"
+            ],
+            achievements: [
+                "SIEM fully operational con agentes en Linux y Windows",
+                "Detección de brute force, cambios FIM y malware con YARA",
+                "Dashboards de seguridad para monitoreo en tiempo real"
+            ],
+            timeline: "En curso (2025)"
         }
     };
 
