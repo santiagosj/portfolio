@@ -24,167 +24,167 @@ const ProjectDetail: React.FC = () => {
         "web-pentest-writeups": {
             id: "web-pentest-writeups",
             title: "Web Application Pentest Lab — Writeups & Methodology",
-            description: "Laboratorio propio de pentesting web con aplicaciones vulnerables",
-            longDescription: "Laboratorio completo de pentesting web con OWASP Juice Shop, DVWA, Altoro Mutual y aplicaciones custom. Documentación exhaustiva de metodología: reconocimiento inicial, enumeración de endpoints, explotación de vulnerabilidades OWASP Top 10, y post-explotación con persistencia de acceso. Cada writeup incluye screenshots, payloads utilizados, y recomendaciones de mitigación.",
+            description: "Self-built web pentesting lab with vulnerable applications",
+            longDescription: "Full web pentesting lab with OWASP Juice Shop, DVWA, Altoro Mutual, and custom applications. Exhaustive methodology documentation: initial reconnaissance, endpoint enumeration, exploitation of OWASP Top 10 vulnerabilities, and post-exploitation with access persistence. Every writeup includes screenshots, the payloads used, and mitigation recommendations.",
             technologies: ["Burp Suite", "OWASP ZAP", "SQLMap", "ffuf", "Python", "JavaScript"],
             category: "Pentesting",
             featured: true,
             challenges: [
-                "Encontrar vulnerabilidades en aplicaciones que no tienen documentación",
-                "Documentar cada paso de forma reproducible",
-                "Crear payloads personalizados para bypass de filtros"
+                "Finding vulnerabilities in applications without documentation",
+                "Documenting every step in a reproducible way",
+                "Building custom payloads to bypass filters"
             ],
             achievements: [
-                "Documentación completa de 10+ vulnerabilidades OWASP Top 10",
-                "Metodología reproducible paso a paso",
-                "Writeups con screenshots y payloads funcionales"
+                "Complete documentation of 10+ OWASP Top 10 vulnerabilities",
+                "Step-by-step reproducible methodology",
+                "Writeups with screenshots and working payloads"
             ],
-            timeline: "En curso (2024 - Presente)"
+            timeline: "Ongoing (2024 - Present)"
         },
         "privesc-arsenal": {
             id: "privesc-arsenal",
             title: "Privilege Escalation Arsenal",
-            description: "Toolkit de escalada de privilegios para Linux y Windows",
-            longDescription: "Toolkit integral de escalada de privilegios para entornos Linux y Windows, construido como preparacion activa para el OSCP. Incluye scripts de enumeracion automatizada (similares a LinPEAS/WinPEAS pero con enfoque en técnicas específicas), exploits compilados listos para usar, y documentacion detallada de cada técnica. Cubre: abuso de SUID/SGID, capabilities, cron jobs, PATH hijacking en Linux; Token Impersonation, SeBackupPrivilege, SeImpersonatePrivilege, UAC bypass, service misconfigurations en Windows. Cada técnica incluye casos reales de HTB y labs.",
+            description: "Privilege escalation toolkit for Linux and Windows",
+            longDescription: "Comprehensive privilege escalation toolkit for Linux and Windows environments, built as active preparation for the OSCP. Includes automated enumeration scripts (similar to LinPEAS/WinPEAS but focused on specific techniques), ready-to-use compiled exploits, and detailed documentation of each technique. Covers: SUID/SGID abuse, capabilities, cron jobs, PATH hijacking on Linux; Token Impersonation, SeBackupPrivilege, SeImpersonatePrivilege, UAC bypass, and service misconfigurations on Windows. Every technique includes real HTB cases and lab scenarios.",
             technologies: ["Python", "Bash", "PowerShell", "C", "Linux", "Windows", "Metasploit"],
             category: "Pentesting",
             featured: true,
             githubUrl: "https://github.com/example/privesc-arsenal",
             challenges: [
-                "Compilar exploits para distintas versiones de kernel/OS",
-                "Automatizar enumeracion sin dejar trazas evidentes",
-                "Mantener el toolkit actualizado con nuevas técnicas"
+                "Compiling exploits for different kernel/OS versions",
+                "Automating enumeration without leaving obvious traces",
+                "Keeping the toolkit updated with new techniques"
             ],
             achievements: [
-                "20+ técnicas de Linux privesc documentadas y funcionales",
-                "15+ técnicas de Windows privesc con scripts automatizados",
-                "Usado como referencia activa en preparacion OSCP"
+                "20+ documented and working Linux privesc techniques",
+                "15+ Windows privesc techniques with automated scripts",
+                "Used as an active reference during OSCP preparation"
             ],
-            timeline: "En curso (2024 - Presente)"
+            timeline: "Ongoing (2024 - Present)"
         },
         "pentest-reporting-engine": {
             id: "pentest-reporting-engine",
             title: "Custom Pentest Reporting Engine",
-            description: "Generador de reportes de pentest profesionales",
-            longDescription: "Generador de reportes de pentest construido con React + TypeScript + Node.js. Templates personalizables para diferentes tipos de assessments (web, network, AD), scoring CVSS v3.1 con calculadora integrada, gráficos de severidad interactivos con Chart.js, y exportación a formatos profesionales (PDF con Playwright, XLSX con ExcelJS). Diseñado para acelerar la generación de reportes post-pentest manteniendo consistencia y profesionalismo.",
+            description: "Professional pentest report generator",
+            longDescription: "Pentest report generator built with React + TypeScript + Node.js. Customizable templates for different assessment types (web, network, AD), CVSS v3.1 scoring with a built-in calculator, interactive severity charts with Chart.js, and export to professional formats (PDF via Playwright, XLSX via ExcelJS). Designed to speed up post-pentest report generation while maintaining consistency and professionalism.",
             technologies: ["React", "TypeScript", "Node.js", "Chart.js", "Playwright", "ExcelJS"],
             category: "Tools",
             featured: true,
             githubUrl: "https://github.com/example/pentest-reporting-engine",
             challenges: [
-                "Implementar scoring CVSS v3.1 correcto con vectores completos",
-                "Generar PDFs con formato profesional y consistente",
-                "Mantener templates flexibles para distintos tipos de assessments"
+                "Implementing correct CVSS v3.1 scoring with full vectors",
+                "Generating PDFs with a professional and consistent format",
+                "Keeping templates flexible for different assessment types"
             ],
             achievements: [
-                "Reducción del 80% en tiempo de generación de reportes",
-                "Templates para web, network y AD assessments",
-                "Exportación a PDF, XLSX y DOCX"
+                "80% reduction in report generation time",
+                "Templates for web, network, and AD assessments",
+                "Export to PDF, XLSX, and DOCX"
             ],
-            timeline: "3 meses (2024)"
+            timeline: "3 months (2024)"
         },
         "recon-scanner": {
             id: "recon-scanner",
             title: "Automated Recon & Vulnerability Scanner",
-            description: "Script de automatización de reconocimiento para pentesting web",
-            longDescription: "Pipeline automatizado de reconocimiento para pentesting web. Orquesta múltiples herramientas en fases: subdomain enumeration (subfinder, assetfinder), port scanning (nmap, masscan), technology fingerprinting (httpx, wappalyzer), directory brute-forcing (ffuf, dirsearch), y vulnerability scanning (nuclei). Pipeline completamente configurable vía YAML, con output estructurado en JSON para integración con otras herramientas.",
+            description: "Automated reconnaissance script for web pentesting",
+            longDescription: "Automated reconnaissance pipeline for web pentesting. Orchestrates multiple tools in phases: subdomain enumeration (subfinder, assetfinder), port scanning (nmap, masscan), technology fingerprinting (httpx, wappalyzer), directory brute-forcing (ffuf, dirsearch), and vulnerability scanning (nuclei). Fully configurable pipeline via YAML, with structured JSON output for integration with other tools.",
             technologies: ["Python", "Bash", "subfinder", "httpx", "nuclei", "ffuf"],
             category: "Automation",
             featured: false,
             githubUrl: "https://github.com/example/recon-scanner",
             challenges: [
-                "Orquestar herramientas con distintos formatos de output",
-                "Evitar rate limiting y detección durante el escaneo",
-                "Priorizar hallazgos críticos en targets grandes"
+                "Orchestrating tools with different output formats",
+                "Avoiding rate limiting and detection during scanning",
+                "Prioritizing critical findings on large targets"
             ],
             achievements: [
-                "Automatización completa de la fase de reconocimiento",
-                "Output unificado en JSON para pipeline CI/CD",
-                "Configuración modular por tipo de assessment"
+                "Complete automation of the reconnaissance phase",
+                "Unified JSON output for CI/CD pipelines",
+                "Modular configuration per assessment type"
             ],
-            timeline: "2 meses (2024)"
+            timeline: "2 months (2024)"
         },
         "browser-extension-security-auditor": {
             id: "browser-extension-security-auditor",
             title: "Browser Extension Security Auditor",
-            description: "Chrome/Firefox extension que analiza seguridad de sitios web en tiempo real",
-            longDescription: "Extensión para Chrome y Firefox que audita la seguridad de sitios web en tiempo real. Detecta: missing o malconfigurados security headers (HSTS, CSP, X-Frame-Options), cookies sin flags Secure/HttpOnly/SameSite, CORS misconfigurations que permiten origins externos, CSP weaknesses que permiten inline scripts, y exposición de información sensible en el DOM. Aprovecha el background en desarrollo web para identificar falsos positivos y entender el contexto de cada hallazgo.",
+            description: "Chrome/Firefox extension that audits website security in real time",
+            longDescription: "Extension for Chrome and Firefox that audits website security in real time. Detects: missing or misconfigured security headers (HSTS, CSP, X-Frame-Options), cookies without Secure/HttpOnly/SameSite flags, CORS misconfigurations that allow external origins, CSP weaknesses that permit inline scripts, and exposure of sensitive information in the DOM. It takes advantage of a web development background to identify false positives and understand the context of each finding.",
             technologies: ["JavaScript", "Chrome Extensions API", "React"],
             category: "Web Security",
             featured: false,
             githubUrl: "https://github.com/example/browser-security-auditor",
             challenges: [
-                "Acceder a headers y cookies desde la extension API",
-                "Minimizar falsos positivos con análisis contextual",
-                "Mantener compatibilidad entre Chrome y Firefox APIs"
+                "Accessing headers and cookies through the extension API",
+                "Minimizing false positives with contextual analysis",
+                "Maintaining compatibility between Chrome and Firefox APIs"
             ],
             achievements: [
-                "Detección de 15+ tipos de misconfiguraciones de seguridad",
-                "Interfaz limpia con severidad y recomendaciones",
-                "Open source con contribuciones de la comunidad"
+                "Detection of 15+ types of security misconfigurations",
+                "Clean interface with severity and recommendations",
+                "Open source with community contributions"
             ],
-            timeline: "2 meses (2024)"
+            timeline: "2 months (2024)"
         },
         "ad-lab": {
             id: "ad-lab",
             title: "Active Directory Lab & Attack Paths",
-            description: "Laboratorio de AD con múltiples dominios y attack paths documentados",
-            longDescription: "Laboratorio de Active Directory montado en casa con múltiples dominios, trusts transitivos y no transitivos, y ACLs complejas. Documentación completa de attack paths: AS-REP roasting contra usuarios sin pre-autenticación, kerberoasting de SPNs, abuso de ACLs (ForceChangePassword, WriteOwner, GenericAll), DCSync para dumpear hashes de KRBTGT, y Golden/Silver Ticket attacks. Mapa de relaciones generado con BloodHound para visualizar attack paths completos.",
+            description: "AD lab with multiple domains and documented attack paths",
+            longDescription: "Active Directory lab built at home with multiple domains, transitive and non-transitive trusts, and complex ACLs. Full attack path documentation: AS-REP roasting against users without pre-authentication, kerberoasting of SPNs, ACL abuse (ForceChangePassword, WriteOwner, GenericAll), DCSync to dump KRBTGT hashes, and Golden/Silver Ticket attacks. Relationship maps generated with BloodHound to visualize complete attack paths.",
             technologies: ["Windows Server", "BloodHound", "Impacket", "CrackMapExec", "Responder", "krbrelay"],
             category: "Pentesting",
             featured: false,
             challenges: [
-                "Configurar trusts entre dominios con relaciones complejas",
-                "Encadenar múltiples ataques en un solo attack path",
-                "Documentar ACL abuse paths con BloodHound"
+                "Configuring trusts between domains with complex relationships",
+                "Chaining multiple attacks into a single attack path",
+                "Documenting ACL abuse paths with BloodHound"
             ],
             achievements: [
-                "Lab multi-dominio con trusts y ACLs complejas",
-                "Attack paths documentados desde usuario estándar hasta DA",
-                "Mapas de relación generados con BloodHound Custom Queries"
+                "Multi-domain lab with trusts and complex ACLs",
+                "Attack paths documented from standard user to DA",
+                "Relationship maps generated with BloodHound Custom Queries"
             ],
-            timeline: "En curso (2024 - Presente)"
+            timeline: "Ongoing (2024 - Present)"
         },
         "secure-k8s-lab": {
             id: "secure-k8s-lab",
             title: "Kubernetes Security Hardening & Runtime Monitoring",
-            description: "Cluster K8s con hardening completo y Falco runtime security",
-            longDescription: "Laboratorio de seguridad en Kubernetes desplegado con kind. Implementación completa de hardening: default-deny network policies, RBAC de mínimo privilegio con ServiceAccount sin automount de tokens, Falco con driver modern_ebpf para detección de amenazas en runtime (shell en containers, mount privilegiados, writes sensibles), y alertas vía falcosidekick. Incluye scripts automatizados para deploy, validación de seguridad, y simulación de ataques para verificar detección. Threat modeling STRIDE aplicado a la arquitectura del cluster.",
+            description: "K8s cluster with full hardening and Falco runtime security",
+            longDescription: "Kubernetes security lab deployed with kind. Complete hardening implementation: default-deny network policies, least-privilege RBAC with ServiceAccounts that don't automount tokens, Falco with the modern_ebpf driver for runtime threat detection (shells in containers, privileged mounts, sensitive writes), and alerting via falcosidekick. Includes automated scripts for deployment, security validation, and attack simulation to verify detection. STRIDE threat modeling applied to the cluster architecture.",
             technologies: ["Kubernetes", "Falco", "Calico", "Helm", "kind", "Bash"],
             category: "Kubernetes Security",
             featured: true,
             githubUrl: "https://github.com/example/secure-k8s-lab",
             challenges: [
-                "Configurar Falco con eBPF sin afectar performance del cluster",
-                "Definir network policies que no rompan la funcionalidad de la app",
-                "Simular ataques realistas sin dañar el ambiente de laboratorio"
+                "Configuring Falco with eBPF without affecting cluster performance",
+                "Defining network policies that don't break app functionality",
+                "Simulating realistic attacks without damaging the lab environment"
             ],
             achievements: [
-                "Cluster K8s con defense-in-depth fully automated via scripts",
-                "Falco detectando shells reversos, mount privilegiados y writes sensibles",
-                "Threat modeling STRIDE documentado para cada componente"
+                "K8s cluster with fully automated defense-in-depth via scripts",
+                "Falco detecting reverse shells, privileged mounts, and sensitive writes",
+                "STRIDE threat modeling documented for each component"
             ],
-            timeline: "3 meses (2025)"
+            timeline: "3 months (2025)"
         },
         "wazuh-home-siem": {
             id: "wazuh-home-siem",
-            title: "Home Lab SIEM con Wazuh",
-            description: "SIEM centralizado con Wazuh, Sysmon y dashboards de seguridad",
-            longDescription: "SIEM completo desplegado con Wazuh all-in-one (manager + indexer + dashboard). Agentes instalados en Linux y Windows con telemetría enriquecida: Sysmon en Windows para logging detallado de procesos y conexiones de red, auditoría de seguridad en Linux. Casos de uso de detección implementados: brute force detection, FIM (File Integrity Monitoring) en directorios críticos, detección de malware con YARA, y escaneo de vulnerabilidades. Dashboards personalizados para visualizar autenticaciones, cambios de privilegios y eventos de seguridad en tiempo real.",
+            title: "Home Lab SIEM with Wazuh",
+            description: "Centralized SIEM with Wazuh, Sysmon, and security dashboards",
+            longDescription: "Complete SIEM deployed with Wazuh all-in-one (manager + indexer + dashboard). Agents installed on Linux and Windows with enriched telemetry: Sysmon on Windows for detailed process and network connection logging, security auditing on Linux. Implemented detection use cases: brute force detection, FIM (File Integrity Monitoring) in critical directories, malware detection with YARA, and vulnerability scanning. Custom dashboards to visualize authentications, privilege changes, and security events in real time.",
             technologies: ["Wazuh", "Elasticsearch", "Sysmon", "Linux", "Windows", "YARA"],
             category: "SIEM",
             featured: false,
             challenges: [
-                "Dimensionar recursos del SIEM para el laboratorio doméstico",
-                "Enriquecer eventos con Sysmon sin saturar el índice",
-                "Crear dashboards útiles que no sean solo ruido visual"
+                "Sizing SIEM resources for a home lab environment",
+                "Enriching events with Sysmon without saturating the index",
+                "Building dashboards that are useful and not just visual noise"
             ],
             achievements: [
-                "SIEM fully operational con agentes en Linux y Windows",
-                "Detección de brute force, cambios FIM y malware con YARA",
-                "Dashboards de seguridad para monitoreo en tiempo real"
+                "Fully operational SIEM with agents on Linux and Windows",
+                "Detection of brute force, FIM changes, and malware with YARA",
+                "Security dashboards for real-time monitoring"
             ],
-            timeline: "En curso (2025)"
+            timeline: "Ongoing (2025)"
         }
     };
 

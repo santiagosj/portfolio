@@ -8,8 +8,13 @@
     background: #0000006e;
     position: relative;
     top: 1.5rem;
+    height: calc(100vh - 16rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
 
     &::-webkit-scrollbar {
+        display: none;
         width: 0px;
         background: transparent;
     }

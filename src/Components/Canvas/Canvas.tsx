@@ -8,6 +8,8 @@ type P5CanvasProps = {
   style?: React.CSSProperties;
 };
 
+const AUTO_RESET_MS = 60_000;
+
 export const P5Canvas: React.FC<P5CanvasProps> = ({ className, style }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const p5InstanceRef = useRef<p5 | null>(null);
@@ -30,6 +32,7 @@ export const P5Canvas: React.FC<P5CanvasProps> = ({ className, style }) => {
       let a = 0.09;
       let bg = 20;
       let c = 0;
+      let lastResetAt = 0;
 
       p.setup = () => {
         console.log("p5 setup called");
@@ -40,9 +43,15 @@ export const P5Canvas: React.FC<P5CanvasProps> = ({ className, style }) => {
         canvas.style("display", "block");
         createStuff();
         initColors(a);
+        lastResetAt = p.millis();
       };
 
       p.draw = () => {
+        if (p.millis() - lastResetAt >= AUTO_RESET_MS) {
+          lastResetAt = p.millis();
+          init();
+        }
+
         for (let i = 0; i < agents.length; i++) {
           agents[i].update();
           agents[i].paint();

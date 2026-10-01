@@ -16,7 +16,7 @@ const Posts: React.FC = () => {
         {
             id: "htb-linux-privesc",
             title: "HTB: Linux Privilege Escalation Deep Dive",
-            description: "Writeup detallado de tecnicas de escalada de privilegios en Linux aplicadas en maquinas HTB: SUID abuse, capabilities, cron jobs, LPE kernel exploits, y PATH hijacking. Metodologia paso a paso con comandos y outputs.",
+            description: "Detailed writeup of Linux privilege escalation techniques applied on HTB machines: SUID abuse, capabilities, cron jobs, LPE kernel exploits, and PATH hijacking. Step-by-step methodology with commands and outputs.",
             technologies: ["Linux", "Bash", "Python", "GTFOBins", "pspy", "linpeas"],
             category: "HTB",
             featured: true
@@ -24,7 +24,7 @@ const Posts: React.FC = () => {
         {
             id: "htb-windows-privesc",
             title: "HTB: Windows Privilege Escalation Techniques",
-            description: "Compilado de tecnicas de escalada en Windows de maquinas HTB: Token Impersonation, SeBackupPrivilege, UAC bypass, service misconfigurations, DLL hijacking, y AlwaysInstallElevated.",
+            description: "Compilation of Windows escalation techniques from HTB machines: Token Impersonation, SeBackupPrivilege, UAC bypass, service misconfigurations, DLL hijacking, and AlwaysInstallElevated.",
             technologies: ["Windows", "PowerShell", "WinPEAS", "SharpUp", "Metasploit"],
             category: "HTB",
             featured: true
@@ -32,7 +32,7 @@ const Posts: React.FC = () => {
         {
             id: "htb-ad-attacks",
             title: "HTB: Active Directory Attack Paths",
-            description: "Writeups de maquinas HTB con Active Directory: AS-REP roasting, kerberoasting, ACL abuse, DCSync, Kerberos delegation, y ataque a trusts. Mapas de attack paths con BloodHound incluidos.",
+            description: "Writeups of HTB machines with Active Directory: AS-REP roasting, kerberoasting, ACL abuse, DCSync, Kerberos delegation, and trust attacks. Includes BloodHound attack path maps.",
             technologies: ["BloodHound", "Impacket", "Responder", "CrackMapExec", "AD", "Kerberos"],
             category: "HTB",
             featured: true
@@ -40,7 +40,7 @@ const Posts: React.FC = () => {
         {
             id: "htb-web-exploitation",
             title: "HTB: Web Exploitation & Pivoting",
-            description: "Writeups de maquinas HTB enfocadas en explotacion web (SQLi, SSTI, LFI/RFI, deserialization) combinada con tunneling y pivoting a traves de redes internas para comprometer otros hosts.",
+            description: "Writeups of HTB machines focused on web exploitation (SQLi, SSTI, LFI/RFI, deserialization) combined with tunneling and pivoting through internal networks to compromise other hosts.",
             technologies: ["Burp Suite", "SQLMap", "ffuf", "Chisel", "Ligolo-ng", "Python"],
             category: "HTB",
             featured: false
@@ -48,7 +48,7 @@ const Posts: React.FC = () => {
         {
             id: "htb-tunneling-pivoting",
             title: "HTB: Tunneling, Pivoting & Port Forwarding",
-            description: "Guia de tecnicas de tunneling y pivoting aplicadas en maquinas HTB: SSH tunneling, Chisel SOCKS proxy, Ligolo-ng, port forwarding con plink, y rutas de pivoting multi-hop.",
+            description: "Guide to tunneling and pivoting techniques applied on HTB machines: SSH tunneling, Chisel SOCKS proxy, Ligolo-ng, port forwarding with plink, and multi-hop pivoting routes.",
             technologies: ["SSH", "Chisel", "Ligolo-ng", "proxychains", "plink", "nmap"],
             category: "HTB",
             featured: false
@@ -56,7 +56,7 @@ const Posts: React.FC = () => {
         {
             id: "htb-recon-methodology",
             title: "HTB: Reconnaissance & Enumeration Playbook",
-            description: "Playbook de reconocimiento y enumeracion para maquinas HTB: desde el escaneo inicial con nmap hasta la enumeracion profunda de servicios, usuarios, y vulnerabilidades. Automatizacion con scripts custom.",
+            description: "Reconnaissance and enumeration playbook for HTB machines: from initial nmap scanning to deep enumeration of services, users, and vulnerabilities. Automation with custom scripts.",
             technologies: ["nmap", "ffuf", "Gobuster", "enum4linux", "smbclient", "Bash"],
             category: "HTB",
             featured: false

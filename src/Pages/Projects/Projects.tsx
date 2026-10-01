@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
         {
             id: "web-pentest-writeups",
             title: "Web Application Pentest Lab — Writeups & Methodology",
-            description: "Laboratorio propio de pentesting web con aplicaciones vulnerables (OWASP Juice Shop, DVWA, Altoro Mutual). Documentacion completa de metodologia: reconocimiento → enumeracion → explotacion → post-explotacion, con screenshots y hallazgos.",
+            description: "Self-built web pentesting lab with vulnerable applications (OWASP Juice Shop, DVWA, Altoro Mutual). Full methodology documentation: reconnaissance → enumeration → exploitation → post-exploitation, with screenshots and findings.",
             technologies: ["Burp Suite", "OWASP ZAP", "SQLMap", "ffuf", "Python", "JavaScript"],
             category: "Pentesting",
             team: "Red Team",
@@ -26,7 +26,7 @@ const Projects: React.FC = () => {
         {
             id: "privesc-arsenal",
             title: "Privilege Escalation Arsenal",
-            description: "Toolkit de escalada de privilegios para Linux y Windows. Scripts de enumeracion automatizada, exploits compilados, y tecnicas documentadas: SUID/Capabilities abuse, Token Impersonation, UAC bypass, SeBackupPrivilege, y mas. Preparacion activa para OSCP.",
+            description: "Privilege escalation toolkit for Linux and Windows. Automated enumeration scripts, compiled exploits, and documented techniques: SUID/Capabilities abuse, Token Impersonation, UAC bypass, SeBackupPrivilege, and more. Actively used for OSCP preparation.",
             technologies: ["Python", "Bash", "PowerShell", "C", "Linux", "Windows"],
             category: "Pentesting",
             team: "Red Team",
@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
         {
             id: "ad-lab",
             title: "Active Directory Lab & Attack Paths",
-            description: "Laboratorio de AD montado en casa con multiples dominios, trusts, y ACLs complejas. Documentacion de attack paths completos: AS-REP roasting → kerberoasting → ACL abuse → DCSync. Mapa de relaciones con BloodHound.",
+            description: "Home-built AD lab with multiple domains, trusts, and complex ACLs. Full attack path documentation: AS-REP roasting → kerberoasting → ACL abuse → DCSync. Relationship mapping with BloodHound.",
             technologies: ["Windows Server", "BloodHound", "Impacket", "CrackMapExec", "Responder", "krbrelay"],
             category: "Pentesting",
             team: "Red Team",
@@ -44,7 +44,7 @@ const Projects: React.FC = () => {
         {
             id: "secure-k8s-lab",
             title: "Kubernetes Security Hardening & Runtime Monitoring",
-            description: "Cluster K8s con hardening completo: network policies, RBAC de minimo privilegio, Falco para deteccion en runtime, y threat modeling STRIDE. Scripts automatizados para deploy y validacion de seguridad.",
+            description: "K8s cluster with full hardening: network policies, least-privilege RBAC, Falco for runtime detection, and STRIDE threat modeling. Automated scripts for deployment and security validation.",
             technologies: ["Kubernetes", "Falco", "Calico", "Helm", "kind", "Bash"],
             category: "Kubernetes Security",
             team: "Blue Team",
@@ -52,8 +52,8 @@ const Projects: React.FC = () => {
         },
         {
             id: "wazuh-home-siem",
-            title: "Home Lab SIEM con Wazuh",
-            description: "SIEM centralizado con Wazuh all-in-one. Agentes en Linux y Windows con Sysmon, FIM, deteccion de vulnerabilidades, y dashboards personalizados para monitoreo de seguridad en tiempo real.",
+            title: "Home Lab SIEM with Wazuh",
+            description: "Centralized SIEM using Wazuh all-in-one. Agents on Linux and Windows with Sysmon, FIM, vulnerability detection, and custom dashboards for real-time security monitoring.",
             technologies: ["Wazuh", "Elasticsearch", "Sysmon", "Linux", "Windows"],
             category: "SIEM",
             team: "Blue Team",

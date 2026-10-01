@@ -12,7 +12,7 @@
     justify-content: flex-end;
 
     .hamburger {
-        display: flex; // Mostrar el menú hamburguesa en pantallas pequeñas
+        display: flex; // Show the hamburger menu on small screens
         flex-direction: column;
         cursor: pointer;
         position: fixed;
@@ -22,7 +22,7 @@
         background: transparent;
     border: none;
         .line {
-            background-color: white; // Líneas blancas para modo oscuro
+            background-color: white; // White lines for dark mode
             height: 1px;
             width: 30px;
             margin: 4px 0;
@@ -42,18 +42,18 @@
             }
 
             .line:nth-child(2) {
-                opacity: 0; // Ocultar la línea del medio
+                opacity: 0; // Hide the middle line
             }
 
             .line:nth-child(3) {
                 background-color: #090909;
-                transform: rotate(-45deg) translate(8px, -5px); // Girar y mover la línea inferior
+                transform: rotate(-45deg) translate(8px, -5px); // Rotate and move the bottom line
             }
         }
     }
 
     .menu {
-        display: none; // Ocultar el menú por defecto en dispositivos móviles
+        display: none; // Hide the menu by default on mobile devices
         flex-direction: column;
         position: fixed;
         top: 0;
@@ -77,13 +77,13 @@
 
         a {
             margin: 1rem 0;
-            color: #090909; // Asegúrate de que los enlaces sean visibles
+            color: #090909; // Make sure links are visible
             text-decoration: none;
         }
     }
 }
 
-// Consulta @media para pantallas más grandes
+// @media query for larger screens
 @media (min-width: 768px) {
     .navbar {
         width: 92%;
@@ -92,13 +92,13 @@
         margin-right: 3.7rem;
         .navbar-left {
             .hamburger {
-                display: none; // Ocultar el menú hamburguesa en pantallas grandes
+                display: none; // Hide the hamburger menu on large screens
             }
 
             .menu {
                 display: flex;
                 align-items: center;
-                display: flex; // Mostrar el menú en línea en pantallas grandes
+                display: flex; // Show the menu inline on large screens
                 flex-direction: row;
                 position: static;
                 opacity: 1;
